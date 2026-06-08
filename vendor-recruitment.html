@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MandarCasa — Únete como Proveedor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0a0e17;
+      --surface:   #111827;
+      --surface2:  #1a2236;
+      --border:    #1f2d45;
+      --accent:    #2563eb;
+      --accent-lt: #3b82f6;
+      --green:     #10b981;
+      --text:      #f0f4ff;
+      --muted:     #8ba0c4;
+      --card-r:    14px;
+      --max:       780px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,14,23,0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .logo { font-weight: 800; font-size: 1.2rem; letter-spacing: -0.5px; }
+    .logo span { color: var(--accent-lt); }
+    nav a.cta-nav {
+      background: var(--accent);
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    nav a.cta-nav:hover { background: var(--accent-lt); }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 80px 24px 60px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(37,99,235,0.15);
+      border: 1px solid rgba(59,130,246,0.3);
+      color: var(--accent-lt);
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 12px; border-radius: 100px;
+      margin-bottom: 24px;
+    }
+    .badge::before { content: '🇸🇻'; }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+    h1 em { font-style: normal; color: var(--accent-lt); }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 540px;
+      margin: 0 auto 36px;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .hero-cta:hover { background: var(--accent-lt); transform: translateY(-1px); }
+    .hero-note { font-size: 0.8rem; color: var(--muted); margin-top: 10px; }
+
+    /* ── STATS STRIP ── */
+    .stats {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 24px;
+    }
+    .stats-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      text-align: center;
+    }
+    .stat-val { font-size: 1.8rem; font-weight: 800; color: var(--text); }
+    .stat-val span { color: var(--accent-lt); }
+    .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
+
+    /* ── SECTION WRAPPER ── */
+    section {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+    .section-label {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent-lt);
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800; letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .section-sub { color: var(--muted); margin-bottom: 40px; max-width: 520px; }
+
+    /* ── HOW IT WORKS ── */
+    .steps { display: grid; gap: 16px; }
+    .step {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--card-r);
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 16px;
+      align-items: start;
+      transition: border-color 0.2s;
+    }
+    .step:hover { border-color: var(--accent); }
+    .step-num {
+      width: 44px; height: 44px;
+      background: rgba(37,99,235,0.15);
+      border: 1px solid rgba(59,130,246,0.25);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; font-weight: 800; color: var(--accent-lt);
+      flex-shrink: 0;
+    }
+    .step h3 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+    .step p { font-size: 0.875rem; color: var(--muted); }
+
+    /* ── BENEFITS ── */
+    .benefits { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 540px) { .benefits { grid-template-columns: 1fr; } }
+    .benefit-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--card-r);
+      padding: 22px;
+    }
+    .benefit-icon { font-size: 1.5rem; margin-bottom: 10px; }
+    .benefit-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
+    .benefit-card p { font-size: 0.825rem; color: var(--muted); }
+
+    /* ── CATEGORIES ── */
+    .categories {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin-top: 32px;
+    }
+    .cat-chip {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 0.85rem; font-weight: 500;
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    /* ── SIGNUP FORM ── */
+    #registro {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+    #registro > div {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+    form { display: grid; gap: 16px; max-width: 560px; }
+    label { font-size: 0.85rem; font-weight: 600; color: var(--muted); display: block; margin-bottom: 5px; }
+    input, select, textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      padding: 12px 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input:focus, select:focus, textarea:focus { border-color: var(--accent-lt); }
+    input::placeholder, textarea::placeholder { color: var(--muted); }
+    select option { background: var(--surface); }
+    textarea { resize: vertical; min-height: 90px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+    .submit-btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem; font-weight: 700;
+      padding: 14px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .submit-btn:hover { background: var(--accent-lt); transform: translateY(-1px); }
+
+    /* ── SUCCESS STATE ── */
+    #success {
+      display: none;
+      background: rgba(16,185,129,0.08);
+      border: 1px solid rgba(16,185,129,0.3);
+      border-radius: var(--card-r);
+      padding: 32px;
+      text-align: center;
+      max-width: 560px;
+    }
+    #success h3 { font-size: 1.3rem; font-weight: 800; color: var(--green); margin-bottom: 8px; }
+    #success p { color: var(--muted); font-size: 0.9rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Mandar<span>Casa</span></div>
+  <a href="#registro" class="cta-nav">Registrarme gratis →</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="badge">Para negocios en El Salvador</div>
+  <h1>Recibe clientes<br/><em>desde los Estados Unidos</em></h1>
+  <p class="hero-sub">
+    Los salvadoreños en EEUU quieren comprar para su familia en El Salvador.
+    Tú tienes el negocio. Nosotros te conectamos.
+  </p>
+  <a href="#registro" class="hero-cta">Registra tu negocio — Es gratis</a>
+  <p class="hero-note">Sin contratos. Sin costo inicial. Solo pagas cuando vendes.</p>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-val">$<span>8B</span></div>
+      <div class="stat-label">enviados a El Salvador cada año</div>
+    </div>
+    <div>
+      <div class="stat-val">3<span>M+</span></div>
+      <div class="stat-label">salvadoreños en EEUU</div>
+    </div>
+    <div>
+      <div class="stat-val"><span>0</span></div>
+      <div class="stat-label">costo para registrarse</div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section>
+  <p class="section-label">Cómo funciona</p>
+  <h2>Simple. Directo. Sin complicaciones.</h2>
+  <p class="section-sub">En 3 pasos tu negocio empieza a recibir pedidos de clientes en EEUU.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div>
+        <h3>Registra tu negocio gratis</h3>
+        <p>Llena el formulario de abajo. Te contactamos por WhatsApp en 24 horas para confirmar tu registro.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div>
+        <h3>Crea tu menú o lista de servicios</h3>
+        <p>Te enviamos una plantilla sencilla. Tú decides qué ofreces, los precios y el área de entrega.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div>
+        <h3>Recibe pedidos y cobra en dólares</h3>
+        <p>Cuando un cliente en EEUU hace un pedido, te avisamos por WhatsApp. Entregas y nosotros te pagamos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section style="padding-top:0">
+  <p class="section-label">¿Por qué MandarCasa?</p>
+  <h2>Lo que ganas al unirte</h2>
+  <p class="section-sub">Accede a un mercado que ya existe — solo falta conectarte.</p>
+  <div class="benefits">
+    <div class="benefit-card">
+      <div class="benefit-icon">💵</div>
+      <h3>Pagos en dólares americanos</h3>
+      <p>Los clientes pagan en USD desde EEUU. Tú recibes tu pago garantizado antes de entregar.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">📱</div>
+      <h3>Todo por WhatsApp</h3>
+      <p>No necesitas apps ni tecnología complicada. Te coordinamos por WhatsApp como lo haces hoy.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🆓</div>
+      <h3>Cero costo inicial</h3>
+      <p>Registrarte es gratis. Solo cobramos una pequeña comisión cuando completas un pedido.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">📈</div>
+      <h3>Nuevos clientes, sin publicidad</h3>
+      <p>Accede a salvadoreños en Houston, Los Ángeles, Nueva York que buscan negocios como el tuyo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section style="padding-top:0">
+  <p class="section-label">Categorías aceptadas</p>
+  <h2>¿Qué tipo de negocio puedes registrar?</h2>
+  <p class="section-sub">Buscamos proveedores en estas categorías para comenzar. ¿Tienes algo diferente? Regístrate igual y lo evaluamos.</p>
+  <div class="categories">
+    <div class="cat-chip">🛒 Abarroterías / Supermercados</div>
+    <div class="cat-chip">🍽️ Restaurantes y comida</div>
+    <div class="cat-chip">💊 Farmacias</div>
+    <div class="cat-chip">🌺 Flores y regalos</div>
+    <div class="cat-chip">🔧 Plomeros y electricistas</div>
+    <div class="cat-chip">🎂 Pastelerías</div>
+    <div class="cat-chip">🧺 Lavandería y limpieza</div>
+    <div class="cat-chip">📚 Útiles escolares</div>
+  </div>
+</section>
+
+<!-- SIGNUP FORM -->
+<div id="registro">
+  <div>
+    <p class="section-label">Registro de Proveedores</p>
+    <h2>Empieza hoy — es gratis</h2>
+    <p class="section-sub" style="margin-bottom:32px;">Llena el formulario y te contactamos por WhatsApp en menos de 24 horas.</p>
+
+    <form id="vendorForm">
+      <div class="form-row">
+        <div>
+          <label for="nombre">Nombre del negocio *</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. Abarrotería López" required />
+        </div>
+        <div>
+          <label for="categoria">Categoría *</label>
+          <select id="categoria" name="categoria" required>
+            <option value="" disabled selected>Selecciona una</option>
+            <option>Abarrotería / Supermercado</option>
+            <option>Restaurante / Comida</option>
+            <option>Farmacia</option>
+            <option>Flores y regalos</option>
+            <option>Fontanería / Electricidad</option>
+            <option>Pastelería</option>
+            <option>Lavandería / Limpieza</option>
+            <option>Útiles escolares</option>
+            <option>Otro</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div>
+          <label for="whatsapp">WhatsApp *</label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="+503 7000-0000" required />
+        </div>
+        <div>
+          <label for="ciudad">Ciudad / Municipio *</label>
+          <input type="text" id="ciudad" name="ciudad" placeholder="Ej. San Salvador" required />
+        </div>
+      </div>
+
+      <div>
+        <label for="descripcion">Cuéntanos sobre tu negocio</label>
+        <textarea id="descripcion" name="descripcion" placeholder="¿Qué vendes? ¿Haces entregas a domicilio? ¿Cuál es tu horario?"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Registrar mi negocio gratis →</button>
+    </form>
+
+    <div id="success">
+      <h3>✅ ¡Registro recibido!</h3>
+      <p>Te contactaremos por WhatsApp en las próximas 24 horas para completar tu registro.<br/>Gracias por unirte a MandarCasa.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 MandarCasa &nbsp;·&nbsp; <a href="mailto:hola@mandarcasa.com">hola@mandarcasa.com</a> &nbsp;·&nbsp; Houston, TX</p>
+</footer>
+
+<script>
+  const form = document.getElementById('vendorForm');
+  const success = document.getElementById('success');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const data = {
+      negocio:     document.getElementById('nombre').value,
+      categoria:   document.getElementById('categoria').value,
+      whatsapp:    document.getElementById('whatsapp').value,
+      ciudad:      document.getElementById('ciudad').value,
+      descripcion: document.getElementById('descripcion').value,
+      timestamp:   new Date().toISOString()
+    };
+
+    // Store locally (replace with Formspree/Airtable endpoint later)
+    const leads = JSON.parse(localStorage.getItem('mc_leads') || '[]');
+    leads.push(data);
+    localStorage.setItem('mc_leads', JSON.stringify(leads));
+
+    form.style.display = 'none';
+    success.style.display = 'block';
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MandarCasa — Ordena comida, medicinas y más desde Houston para tu familia en El Salvador. Seguro, rápido y sin complicaciones." />
+  <meta name="keywords" content="remesas El Salvador, enviar comida El Salvador, salvadoreños Houston, San Miguel El Salvador, remittance commerce" />
+  <meta property="og:title" content="MandarCasa — Envía a tu familia en El Salvador" />
+  <meta property="og:description" content="Ordena desde Houston. Tu familia en El Salvador recibe el mismo día. Comida, medicinas, servicios y más." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mandarcasa.com" />
+  <title>MandarCasa — Envía a tu familia en El Salvador</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav class="nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav__inner">
+
+      <a href="index.html" class="nav__logo" aria-label="MandarCasa inicio">
+        Mandar<span>Casa</span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="como-funciona.html">Cómo Funciona</a></li>
+        <li><a href="proveedores.html">Para Proveedores</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <div class="nav__cta">
+        <a href="#pedido" class="btn btn-primary">Enviar ahora →</a>
+      </div>
+
+      <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div><!-- /nav__inner -->
+
+    <div class="nav__mobile" id="mobile-menu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="como-funciona.html">Cómo Funciona</a></li>
+        <li><a href="proveedores.html">Para Proveedores</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <a href="#pedido" class="btn btn-primary btn-lg" style="margin-top:1rem;display:inline-block;">Enviar ahora →</a>
+    </div>
+
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="hero" aria-label="Inicio">
+
+    <div class="badge">🇸🇻 San Miguel &bull; San Salvador &bull; Santa Ana</div>
+
+    <h1>
+      Envía comida, medicinas y<br />
+      <em>más a tu familia</em>
+    </h1>
+
+    <p class="hero__sub">
+      Ordena desde Houston. Tu familia en El Salvador recibe.
+      Seguro, rápido, sin complicaciones.
+    </p>
+
+    <div class="hero__btns">
+      <a href="#pedido" class="btn btn-primary btn-lg">Hacer un pedido →</a>
+      <a href="como-funciona.html" class="btn btn-outline btn-lg">Ver cómo funciona</a>
+    </div>
+
+    <p class="hero__note">
+      Sin registro requerido &nbsp;&middot;&nbsp; Pago en dólares &nbsp;&middot;&nbsp; Entrega el mismo día
+    </p>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       STATS STRIP
+  ═══════════════════════════════════════════ -->
+  <div class="stats-strip" aria-label="Datos clave">
+    <div class="stats-strip__inner">
+
+      <div class="stat">
+        <span class="stat__val">$8B+</span>
+        <span class="stat__label">enviados a El Salvador cada año</span>
+      </div>
+
+      <div class="stat">
+        <span class="stat__val">3M+</span>
+        <span class="stat__label">salvadoreños en EEUU</span>
+      </div>
+
+      <div class="stat">
+        <span class="stat__val">Mismo día</span>
+        <span class="stat__label">entrega garantizada</span>
+      </div>
+
+      <div class="stat">
+        <span class="stat__val">$0</span>
+        <span class="stat__label">costo para registrarse como proveedor</span>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════
+       SERVICES SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="section reveal" id="servicios" aria-label="Nuestros servicios">
+
+    <span class="section__label">Lo que puedes enviar</span>
+    <h2 class="section__title">Todo lo que tu familia necesita,<br />desde donde tú estás</h2>
+    <p class="section__sub">
+      Conectamos a familias en Houston con negocios locales de confianza en El Salvador.
+      Lo que ordenas hoy, tu familia lo recibe hoy.
+    </p>
+
+    <div class="grid-4">
+
+      <div class="card" aria-label="Servicio: Abarrotes y Comida">
+        <div class="card__icon" aria-hidden="true">🛒</div>
+        <h3>Abarrotes y Comida</h3>
+        <p>
+          Envía canastas básicas, pupusas, tamales y productos de la tienda directamente
+          a la puerta de tu familia. Trabajamos con pulperías y supermercados locales
+          que ya conoces y en los que confías.
+        </p>
+      </div>
+
+      <div class="card" aria-label="Servicio: Farmacia y Medicinas">
+        <div class="card__icon" aria-hidden="true">💊</div>
+        <h3>Farmacia y Medicinas</h3>
+        <p>
+          Asegúrate de que tu mamá, tu abuelita o tus hijos tengan los medicamentos
+          que necesitan sin esperar. Pedimos directamente a farmacias certificadas
+          en San Miguel, Santa Ana y San Salvador.
+        </p>
+      </div>
+
+      <div class="card" aria-label="Servicio: Servicios al Hogar">
+        <div class="card__icon" aria-hidden="true">🔧</div>
+        <h3>Servicios al Hogar</h3>
+        <p>
+          Paga desde aquí para que un plomero, electricista o técnico de confianza
+          vaya a atender a tu familia allá. Contratistas verificados, precios
+          transparentes y confirmación en tiempo real.
+        </p>
+      </div>
+
+      <div class="card" aria-label="Servicio: Flores y Regalos">
+        <div class="card__icon" aria-hidden="true">🌺</div>
+        <h3>Flores y Regalos</h3>
+        <p>
+          Celebra un cumpleaños, un aniversario o simplemente di que los extrañas
+          con un arreglo floral o una caja de regalo especial. Entregamos con
+          presentación hermosa y tarjeta personalizada de tu parte.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       HOW IT WORKS
+  ═══════════════════════════════════════════ -->
+  <section class="section reveal" id="como-funciona" aria-label="Cómo funciona MandarCasa">
+
+    <span class="section__label">El proceso</span>
+    <h2 class="section__title">Tres pasos. Así de sencillo.</h2>
+    <p class="section__sub">
+      Diseñado para que cualquier persona — sin importar qué tan cómodo se sienta
+      con la tecnología — pueda enviarle algo a su familia en minutos.
+    </p>
+
+    <div class="grid-3">
+
+      <div class="step-card reveal">
+        <div class="step-num" aria-hidden="true">1</div>
+        <h3>Elige lo que quieres enviar</h3>
+        <p>
+          Navega nuestro catálogo de productos y servicios disponibles en tu ciudad
+          de destino. Puedes buscar por categoría, nombre del producto o nombre del negocio local.
+          Si no encuentras algo, escríbenos por WhatsApp y lo buscamos por ti.
+        </p>
+      </div>
+
+      <div class="step-card reveal">
+        <div class="step-num" aria-hidden="true">2</div>
+        <h3>Paga en dólares desde EEUU</h3>
+        <p>
+          Paga de forma segura con tarjeta de crédito, débito o Zelle — en dólares,
+          sin conversiones confusas. Tu pago se procesa al instante y nosotros
+          coordinamos todo con el proveedor local.
+        </p>
+      </div>
+
+      <div class="step-card reveal">
+        <div class="step-num" aria-hidden="true">3</div>
+        <h3>Tu familia recibe y tú confirmas</h3>
+        <p>
+          Te enviamos una notificación por WhatsApp cuando el pedido sale y otra
+          cuando tu familia lo recibe. Puedes ver el estado de tu pedido en tiempo real,
+          sin llamadas ni incertidumbre.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       ORDER / WAITLIST SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="section reveal" id="pedido" aria-label="Hacer un pedido">
+
+    <span class="section__label">Comienza hoy</span>
+    <h2 class="section__title">Plataforma de pedidos</h2>
+    <p class="section__sub">
+      Estamos lanzando muy pronto en San Miguel. Déjanos tu número de WhatsApp
+      y serás el primero en saber cuándo puedes hacer tu primer pedido — además
+      de recibir un descuento especial de apertura.
+    </p>
+
+    <div class="card card--accent" style="max-width:560px;margin:0 auto;text-align:center;">
+
+      <div class="order-badge" aria-hidden="true">🚀</div>
+
+      <h3 style="margin-bottom:.5rem;">Lanzamiento próximo — San Miguel</h3>
+      <p style="margin-bottom:1.5rem;opacity:.8;font-size:.95rem;">
+        Únete a la lista de espera y recibe <strong>envío gratis</strong>
+        en tu primer pedido cuando abramos.
+      </p>
+
+      <form class="order-form" id="waitlist-form" novalidate aria-label="Formulario de lista de espera">
+
+        <div class="form-group">
+          <label for="wa-number">Tu número de WhatsApp (EEUU)</label>
+          <div class="input-wrap">
+            <span class="input-prefix" aria-hidden="true">🇺🇸 +1</span>
+            <input
+              type="tel"
+              id="wa-number"
+              name="whatsapp"
+              placeholder="(832) 000-0000"
+              pattern="[\d\s\-\(\)]{7,15}"
+              maxlength="15"
+              autocomplete="tel"
+              required
+              aria-required="true"
+              aria-describedby="wa-hint"
+            />
+          </div>
+          <small id="wa-hint" class="form-hint">Solo te contactaremos cuando estemos listos para servirte.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="ciudad-destino">Ciudad de destino en El Salvador</label>
+          <select id="ciudad-destino" name="ciudad" required aria-required="true">
+            <option value="" disabled selected>Selecciona una ciudad...</option>
+            <option value="san-miguel">San Miguel</option>
+            <option value="san-salvador">San Salvador</option>
+            <option value="santa-ana">Santa Ana</option>
+            <option value="usulutan">Usulután</option>
+            <option value="sonsonate">Sonsonate</option>
+            <option value="otra">Otra ciudad</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;margin-top:.5rem;">
+          Avisarme cuando esté disponible →
+        </button>
+
+        <p class="form-privacy">
+          🔒 Tu información es privada. Sin spam, sin llamadas de ventas.
+        </p>
+
+      </form>
+
+      <!-- Success state (hidden by default) -->
+      <div class="order-success" id="waitlist-success" aria-live="polite" hidden>
+        <div class="success-icon" aria-hidden="true">✅</div>
+        <h3>¡Ya estás en la lista!</h3>
+        <p>
+          Te avisaremos por WhatsApp en cuanto lancemos en tu ciudad.
+          Mientras tanto, si tienes un pedido urgente escríbenos directamente:
+        </p>
+        <a
+          href="https://wa.me/18323624499?text=Hola%20MandarCasa%2C%20quiero%20hacer%20un%20pedido"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary btn-lg"
+          style="margin-top:1rem;display:inline-block;"
+        >
+          💬 Escribir por WhatsApp ahora
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIALS
+  ═══════════════════════════════════════════ -->
+  <section class="section reveal" id="testimonios" aria-label="Testimonios de clientes">
+
+    <span class="section__label">Lo que dicen nuestros clientes</span>
+    <h2 class="section__title">Familias conectadas,<br />corazones tranquilos</h2>
+
+    <div class="grid-3">
+
+      <article class="testimonial reveal" aria-label="Testimonio de María G.">
+        <div class="testimonial__stars" aria-label="5 estrellas">★★★★★</div>
+        <blockquote>
+          <p>
+            "Le mandé los medicamentos a mi mamá en San Miguel y llegaron en menos de
+            tres horas — algo que nunca creí posible desde aquí en Houston. Ahora uso
+            MandarCasa cada vez que necesito mandarle algo importante a mi familia."
+          </p>
+        </blockquote>
+        <footer class="testimonial__author">
+          <div class="testimonial__avatar" aria-hidden="true">MG</div>
+          <div>
+            <strong>María G.</strong>
+            <span>Houston, TX</span>
+          </div>
+        </footer>
+      </article>
+
+      <article class="testimonial reveal" aria-label="Testimonio de Carlos R.">
+        <div class="testimonial__stars" aria-label="5 estrellas">★★★★★</div>
+        <blockquote>
+          <p>
+            "Mandé una canasta de comida a mis abuelos para su aniversario y hasta
+            les incluyeron flores — todo por un precio justo y sin salir de mi trabajo.
+            La confirmación por WhatsApp me dio mucha tranquilidad de saber que todo llegó bien."
+          </p>
+        </blockquote>
+        <footer class="testimonial__author">
+          <div class="testimonial__avatar" aria-hidden="true">CR</div>
+          <div>
+            <strong>Carlos R.</strong>
+            <span>Pasadena, TX</span>
+          </div>
+        </footer>
+      </article>
+
+      <article class="testimonial reveal" aria-label="Testimonio de Ana L.">
+        <div class="testimonial__stars" aria-label="5 estrellas">★★★★★</div>
+        <blockquote>
+          <p>
+            "Siempre me preocupaba que el dinero que enviaba no se usara en lo que
+            mi familia necesitaba. Con MandarCasa puedo ordenar exactamente lo que
+            necesitan y sé que lo reciben — eso no tiene precio."
+          </p>
+        </blockquote>
+        <footer class="testimonial__author">
+          <div class="testimonial__avatar" aria-hidden="true">AL</div>
+          <div>
+            <strong>Ana L.</strong>
+            <span>Katy, TX</span>
+          </div>
+        </footer>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       CTA BANNER
+  ═══════════════════════════════════════════ -->
+  <section class="cta-banner reveal" aria-label="Llamada a la acción">
+    <div class="cta-banner__inner">
+
+      <span class="section__label" style="color:inherit;opacity:.8;">¿Listo para empezar?</span>
+      <h2>Empieza a enviar hoy</h2>
+      <p>
+        Tu familia está esperando. Haz tu primer pedido en menos de 5 minutos
+        o escríbenos por WhatsApp si tienes una solicitud especial.
+      </p>
+
+      <div class="hero__btns" style="margin-top:2rem;">
+        <a href="#pedido" class="btn btn-primary btn-lg">Hacer un pedido →</a>
+        <a
+          href="https://wa.me/18323624499?text=Hola%20MandarCasa%2C%20quiero%20hacer%20un%20pedido"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline btn-lg"
+        >
+          💬 Hablar por WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid">
+
+      <!-- Column 1: Brand -->
+      <div class="footer__col footer__col--brand">
+        <a href="index.html" class="nav__logo footer__logo" aria-label="MandarCasa inicio">
+          Mandar<span>Casa</span>
+        </a>
+        <p class="footer__desc">
+          Conectando familias salvadoreñas en EEUU con negocios locales de confianza
+          en El Salvador. Porque la distancia no debería separar a los que amas
+          de lo que necesitan.
+        </p>
+        <div class="footer__social" aria-label="Redes sociales">
+          <a
+            href="https://facebook.com/mandarcasa"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="MandarCasa en Facebook"
+          >
+            <span aria-hidden="true">📘</span> Facebook
+          </a>
+          <a
+            href="https://instagram.com/mandarcasa"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="MandarCasa en Instagram"
+          >
+            <span aria-hidden="true">📸</span> Instagram
+          </a>
+          <a
+            href="https://wa.me/18323624499"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="MandarCasa en WhatsApp"
+          >
+            <span aria-hidden="true">💬</span> WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Services -->
+      <div class="footer__col">
+        <h4 class="footer__heading">Servicios</h4>
+        <ul role="list">
+          <li><a href="#servicios">Abarrotes y Comida</a></li>
+          <li><a href="#servicios">Farmacia y Medicinas</a></li>
+          <li><a href="#servicios">Servicios al Hogar</a></li>
+          <li><a href="#servicios">Flores y Regalos</a></li>
+          <li><a href="proveedores.html">Para Proveedores</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Company -->
+      <div class="footer__col">
+        <h4 class="footer__heading">Empresa</h4>
+        <ul role="list">
+          <li><a href="como-funciona.html">Cómo Funciona</a></li>
+          <li><a href="proveedores.html">Únete como Proveedor</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="terminos.html">Términos y Condiciones</a></li>
+          <li><a href="privacidad.html">Política de Privacidad</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact -->
+      <div class="footer__col">
+        <h4 class="footer__heading">Contacto</h4>
+        <address>
+          <ul role="list" class="footer__contact-list">
+            <li>
+              <span aria-hidden="true">✉️</span>
+              <a href="mailto:hola@mandarcasa.com">hola@mandarcasa.com</a>
+            </li>
+            <li>
+              <span aria-hidden="true">📞</span>
+              <a href="tel:+18323624499">+1 832-362-4499</a>
+            </li>
+            <li>
+              <span aria-hidden="true">📍</span>
+              <span>San Miguel, El Salvador</span>
+            </li>
+            <li>
+              <span aria-hidden="true">🕐</span>
+              <span>Lun–Sáb, 7am–8pm CST</span>
+            </li>
+          </ul>
+        </address>
+      </div>
+
+    </div><!-- /footer__grid -->
+
+    <!-- Bottom Bar -->
+    <div class="footer__bottom">
+      <p>&copy; 2025 MandarCasa. Todos los derechos reservados.</p>
+      <p>Hecho con ❤️ para la comunidad salvadoreña en EEUU.</p>
+    </div>
+
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════
+       WHATSAPP FLOAT BUTTON
+  ═══════════════════════════════════════════ -->
+  <a
+    href="https://wa.me/18323624499?text=Hola%20MandarCasa%2C%20quiero%20hacer%20un%20pedido"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="wa-float"
+    aria-label="Chatear con MandarCasa por WhatsApp"
+    title="Chatea con nosotros"
+  >
+    💬
+  </a>
+
+
+  <!-- ═══════════════════════════════════════════
+       SCRIPTS
+  ═══════════════════════════════════════════ -->
+  <script src="js/script.js"></script>
+
+  <script>
+    // ── Waitlist Form Handler ──────────────────────────────────────────────
+    (function () {
+      var form    = document.getElementById('waitlist-form');
+      var success = document.getElementById('waitlist-success');
+
+      if (!form) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var phone  = document.getElementById('wa-number').value.trim();
+        var ciudad = document.getElementById('ciudad-destino').value;
+
+        if (!phone || !ciudad) {
+          var firstEmpty = !phone
+            ? document.getElementById('wa-number')
+            : document.getElementById('ciudad-destino');
+          firstEmpty.focus();
+          firstEmpty.style.borderColor = 'var(--color-error, #e53e3e)';
+          return;
+        }
+
+        // Simulate async submission (replace with real API call)
+        var btn = form.querySelector('button[type="submit"]');
+        btn.textContent = 'Guardando…';
+        btn.disabled = true;
+
+        setTimeout(function () {
+          form.hidden   = true;
+          success.hidden = false;
+
+          // Optional: log to console for development
+          console.info('MandarCasa waitlist:', { phone: phone, ciudad: ciudad });
+        }, 900);
+      });
+
+      // Reset border on input
+      ['wa-number', 'ciudad-destino'].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) {
+          el.addEventListener('input', function () {
+            el.style.borderColor = '';
+          });
+        }
+      });
+    }());
+  </script>
+
+</body>
+</html>
