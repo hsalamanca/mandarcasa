@@ -10,225 +10,213 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mandarcasa.com" />
   <title>MandarCasa — Envía a tu familia en El Salvador</title>
+  
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css" />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { 'sans': ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            'brand': '#2563eb',
+            'brand-light': '#3b82f6',
+            'dark': '#07101f',
+            'surface': '#0d1a2e',
+            'accent': '#2563eb'
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
+<body class="bg-[#07101f] text-white font-sans">
 
-  <!-- ═══════════════════════════════════════════
-       NAVIGATION
-  ═══════════════════════════════════════════ -->
-  <nav class="nav" role="navigation" aria-label="Navegación principal">
-    <div class="nav__inner">
-
-      <a href="index.html" class="nav__logo" aria-label="MandarCasa inicio">
-        Mandar<span>Casa</span>
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 bg-[#07101f]/95 backdrop-blur-xl border-b border-[#1e3050]">
+    <div class="max-w-screen-xl mx-auto px-6 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-1 text-2xl font-black tracking-tighter">
+        Mandar<span class="text-[#3b82f6]">Casa</span>
       </a>
-
-      <ul class="nav__links" role="list">
-        <li><a href="index.html" aria-current="page">Inicio</a></li>
-        <li><a href="como-funciona.html">Cómo Funciona</a></li>
-        <li><a href="proveedores.html">Para Proveedores</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-
-      <div class="nav__cta">
-        <a href="#pedido" class="btn btn-primary">Enviar ahora →</a>
+      
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="como-funciona.html" class="hover:text-[#3b82f6] transition-colors">Cómo Funciona</a>
+        <a href="proveedores.html" class="hover:text-[#3b82f6] transition-colors">Para Proveedores</a>
+        <a href="contacto.html" class="hover:text-[#3b82f6] transition-colors">Contacto</a>
       </div>
-
-      <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-    </div><!-- /nav__inner -->
-
-    <div class="nav__mobile" id="mobile-menu" aria-hidden="true">
-      <ul role="list">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="como-funciona.html">Cómo Funciona</a></li>
-        <li><a href="proveedores.html">Para Proveedores</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-      <a href="#pedido" class="btn btn-primary btn-lg" style="margin-top:1rem;display:inline-block;">Enviar ahora →</a>
+      
+      <div class="flex items-center gap-4">
+        <a href="#pedido" 
+           class="px-6 py-2.5 rounded-xl bg-[#2563eb] hover:bg-[#3b82f6] font-semibold text-sm transition-all active:scale-[0.985]">
+          Enviar ahora →
+        </a>
+        
+        <!-- Mobile menu -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-white" aria-label="Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
     </div>
-
+    
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 bg-[#07101f] border-t border-[#1e3050]">
+      <div class="flex flex-col gap-4 pt-4 text-sm font-medium">
+        <a href="como-funciona.html" class="py-1">Cómo Funciona</a>
+        <a href="proveedores.html" class="py-1">Para Proveedores</a>
+        <a href="contacto.html" class="py-1">Contacto</a>
+        <a href="#pedido" class="mt-3 block px-5 py-3 bg-[#2563eb] rounded-2xl text-center text-sm font-semibold">Enviar ahora →</a>
+      </div>
+    </div>
   </nav>
 
-
-  <!-- ═══════════════════════════════════════════
-       HERO
-  ═══════════════════════════════════════════ -->
-  <section class="hero" aria-label="Inicio">
-
-    <div class="badge">🇸🇻 San Miguel &bull; San Salvador &bull; Santa Ana</div>
-
-    <h1>
-      Envía comida, medicinas y<br />
-      <em>más a tu familia</em>
-    </h1>
-
-    <p class="hero__sub">Ordena desde Houston. Tu familia en El Salvador recibe. Seguro, rápido, sin complicaciones.</p>
-
-    <div class="hero__btns">
-      <a href="#pedido" class="btn btn-primary btn-lg">Hacer un pedido →</a>
-      <a href="como-funciona.html" class="btn btn-outline btn-lg">Ver cómo funciona</a>
+  <!-- HERO -->
+  <section class="max-w-screen-xl mx-auto px-6 pt-20 pb-16 text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-3xl bg-[#0d1a2e] border border-[#1e3050] text-[#3b82f6] text-sm font-semibold mb-6">
+      🇸🇻 San Miguel • San Salvador • Santa Ana
     </div>
-
-    <p class="hero__note">Sin registro requerido &nbsp;&middot;&nbsp; Pago en dólares &nbsp;&middot;&nbsp; Entrega el mismo día</p>
-
+    
+    <h1 class="text-6xl md:text-7xl font-black tracking-tighter leading-none mb-6">
+      Envía comida,<br>medicinas y<br>
+      <span class="bg-gradient-to-r from-[#3b82f6] to-white bg-clip-text text-transparent">más a tu familia</span>
+    </h1>
+    
+    <p class="max-w-md mx-auto text-xl text-white/70 mb-10">
+      Ordena desde Houston. Tu familia recibe hoy. Seguro. Rápido. Sin complicaciones.
+    </p>
+    
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#pedido" 
+         class="inline-block px-9 py-4 rounded-2xl bg-[#2563eb] text-lg font-semibold hover:bg-[#3b82f6] transition-all active:scale-[0.985]">
+        Hacer un pedido
+      </a>
+      <a href="como-funciona.html" 
+         class="inline-flex items-center px-9 py-4 rounded-2xl border border-[#334b6e] hover:bg-white/5 text-lg font-medium transition-all active:scale-[0.985]">
+        Ver cómo funciona
+      </a>
+    </div>
+    
+    <div class="flex justify-center gap-x-7 gap-y-2 mt-8 text-sm text-white/50">
+      <div>Sin registro</div>
+      <div>Pago en dólares</div>
+      <div>Entrega mismo día</div>
+    </div>
   </section>
 
-
-  <!-- ═══════════════════════════════════════════
-       STATS STRIP
-  ═══════════════════════════════════════════ -->
-  <div class="stats-strip" aria-label="Datos clave">
-    <div class="stats-strip__inner">
-
-      <div class="stat">
-        <span class="stat__val">$8B+</span>
-        <span class="stat__label">enviados a El Salvador cada año</span>
+  <!-- STATS -->
+  <div class="border-y border-[#1e3050] bg-[#0d1a2e]">
+    <div class="max-w-screen-xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="font-black text-4xl text-[#3b82f6]">$8B+</div>
+        <div class="text-sm text-white/70 mt-1">enviados a El Salvador cada año</div>
       </div>
-
-      <div class="stat">
-        <span class="stat__val">3M+</span>
-        <span class="stat__label">salvadoreños en EEUU</span>
+      <div>
+        <div class="font-black text-4xl text-[#3b82f6]">3M+</div>
+        <div class="text-sm text-white/70 mt-1">salvadoreños en EEUU</div>
       </div>
-
-      <div class="stat">
-        <span class="stat__val">Mismo día</span>
-        <span class="stat__label">entrega garantizada</span>
+      <div>
+        <div class="font-black text-4xl text-[#3b82f6]">Mismo día</div>
+        <div class="text-sm text-white/70 mt-1">entrega garantizada</div>
       </div>
-
-      <div class="stat">
-        <span class="stat__val">$0</span>
-        <span class="stat__label">costo para registrarse como proveedor</span>
+      <div>
+        <div class="font-black text-4xl text-[#3b82f6]">$0</div>
+        <div class="text-sm text-white/70 mt-1">costo para ser proveedor</div>
       </div>
-
     </div>
   </div>
 
-
-  <!-- ═══════════════════════════════════════════
-       SERVICES SECTION
-  ═══════════════════════════════════════════ -->
-  <section class="section reveal" id="servicios" aria-label="Nuestros servicios">
-
-    <span class="section__label">Lo que puedes enviar</span>
-    <h2 class="section__title">Todo lo que tu familia necesita,<br />desde donde tú estás</h2>
-    <p class="section__sub">Conectamos a familias en Houston con negocios locales de confianza en El Salvador. Lo que ordenas hoy, tu familia lo recibe hoy.</p>
-
-    <div class="grid-4">
-
-      <div class="card" aria-label="Servicio: Abarrotes y Comida">
-        <div class="card__icon" aria-hidden="true">🛒</div>
-        <h3>Abarrotes y Comida</h3>
-        <p>Envía canastas básicas, pupusas, tamales y productos de la tienda directamente a la puerta de tu familia. Trabajamos con pulperías y supermercados locales que ya conoces y en los que confías.</p>
-      </div>
-
-      <div class="card" aria-label="Servicio: Farmacia y Medicinas">
-        <div class="card__icon" aria-hidden="true">💊</div>
-        <h3>Farmacia y Medicinas</h3>
-        <p>Asegúrate de que tu mamá, tu abuelita o tus hijos tengan los medicamentos que necesitan sin esperar. Pedimos directamente a farmacias certificadas en San Miguel, Santa Ana y San Salvador.</p>
-      </div>
-
-      <div class="card" aria-label="Servicio: Servicios al Hogar">
-        <div class="card__icon" aria-hidden="true">🔧</div>
-        <h3>Servicios al Hogar</h3>
-        <p>Paga desde aquí para que un plomero, electricista o técnico de confianza vaya a atender a tu familia allá. Contratistas verificados, precios transparentes y confirmación en tiempo real.</p>
-      </div>
-
-      <div class="card" aria-label="Servicio: Flores y Regalos">
-        <div class="card__icon" aria-hidden="true">🌺</div>
-        <h3>Flores y Regalos</h3>
-        <p>Celebra un cumpleaños, un aniversario o simplemente di que los extrañas con un arreglo floral o una caja de regalo especial. Entregamos con presentación hermosa y tarjeta personalizada de tu parte.</p>
-      </div>
-
+  <!-- SERVICES -->
+  <section class="max-w-screen-xl mx-auto px-6 pt-20 pb-16">
+    <div class="text-center mb-12">
+      <div class="inline text-[#3b82f6] text-xs font-bold tracking-[3px] mb-3 block">LO QUE PUEDES ENVIAR</div>
+      <h2 class="text-4xl md:text-5xl font-black tracking-tight">Todo lo que tu familia necesita</h2>
     </div>
 
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       HOW IT WORKS
-  ═══════════════════════════════════════════ -->
-  <section class="section reveal" id="como-funciona" aria-label="Cómo funciona MandarCasa">
-
-    <span class="section__label">El proceso</span>
-    <h2 class="section__title">Tres pasos. Así de sencillo.</h2>
-    <p class="section__sub">Diseñado para que cualquier persona — sin importar qué tan cómodo se sienta con la tecnología — pueda enviarle algo a su familia en minutos.</p>
-
-    <div class="grid-3">
-
-      <div class="step-card reveal">
-        <div class="step-num" aria-hidden="true">1</div>
-        <h3>Elige lo que quieres enviar</h3>
-        <p>Navega nuestro catálogo de productos y servicios disponibles en tu ciudad de destino. Puedes buscar por categoría, nombre del producto o nombre del negocio local. Si no encuentras algo, escríbenos por WhatsApp y lo buscamos por ti.</p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="bg-[#0d1a2e] border border-[#1e3050] rounded-3xl p-8 hover:border-[#2563eb]/70 group transition-colors">
+        <div class="text-4xl mb-4">🛒</div>
+        <div class="font-semibold text-xl mb-2">Abarrotes y Comida</div>
+        <p class="text-white/70 leading-snug">Canastas, pupusas, tamales y productos locales entregados a la puerta.</p>
       </div>
-
-      <div class="step-card reveal">
-        <div class="step-num" aria-hidden="true">2</div>
-        <h3>Paga en dólares desde EEUU</h3>
-        <p>Paga de forma segura con tarjeta de crédito, débito o Zelle — en dólares, sin conversiones confusas. Tu pago se procesa al instante y nosotros coordinamos todo con el proveedor local.</p>
+      <div class="bg-[#0d1a2e] border border-[#1e3050] rounded-3xl p-8 hover:border-[#2563eb]/70 group transition-colors">
+        <div class="text-4xl mb-4">💊</div>
+        <div class="font-semibold text-xl mb-2">Farmacia y Medicinas</div>
+        <p class="text-white/70 leading-snug">Medicamentos y productos de farmacia desde San Miguel, Santa Ana y San Salvador.</p>
       </div>
-
-      <div class="step-card reveal">
-        <div class="step-num" aria-hidden="true">3</div>
-        <h3>Tu familia recibe y tú confirmas</h3>
-        <p>Te enviamos una notificación por WhatsApp cuando el pedido sale y otra cuando tu familia lo recibe. Puedes ver el estado de tu pedido en tiempo real, sin llamadas ni incertidumbre.</p>
+      <div class="bg-[#0d1a2e] border border-[#1e3050] rounded-3xl p-8 hover:border-[#2563eb]/70 group transition-colors">
+        <div class="text-4xl mb-4">🔧</div>
+        <div class="font-semibold text-xl mb-2">Servicios al Hogar</div>
+        <p class="text-white/70 leading-snug">Plomeros, electricistas y técnicos verificados para tu familia.</p>
       </div>
-
+      <div class="bg-[#0d1a2e] border border-[#1e3050] rounded-3xl p-8 hover:border-[#2563eb]/70 group transition-colors">
+        <div class="text-4xl mb-4">🌺</div>
+        <div class="font-semibold text-xl mb-2">Flores y Regalos</div>
+        <p class="text-white/70 leading-snug">Regalos y arreglos florales con tarjeta personalizada.</p>
+      </div>
     </div>
-
   </section>
 
-
-  <!-- ═══════════════════════════════════════════
-       ORDER / WAITLIST SECTION
-  ═══════════════════════════════════════════ -->
-  <section class="section reveal" id="pedido" aria-label="Hacer un pedido">
-
-    <span class="section__label">Comienza hoy</span>
-    <h2 class="section__title">Plataforma de pedidos</h2>
-    <p class="section__sub">Estamos lanzando muy pronto en San Miguel. Déjanos tu número de WhatsApp y serás el primero en saber cuándo puedes hacer tu primer pedido — además de recibir un descuento especial de apertura.</p>
-
-    <div class="card card--accent" style="max-width:560px;margin:0 auto;text-align:center;">
-
-      <div class="order-badge" aria-hidden="true">🚀</div>
-
-      <h3 style="margin-bottom:.5rem;">Lanzamiento próximo — San Miguel</h3>
-      <p style="margin-bottom:1.5rem;opacity:.8;font-size:.95rem;">Únete a la lista de espera y recibe <strong>envío gratis</strong> en tu primer pedido cuando abramos.</p>
-
-      <form class="order-form" id="waitlist-form" novalidate aria-label="Formulario de lista de espera">
-
-        <div class="form-group">
-          <label for="wa-number">Tu número de WhatsApp (EEUU)</label>
-          <div class="input-wrap">
-            <span class="input-prefix" aria-hidden="true">🇺🇸 +1</span>
-            <input
-              type="tel"
-              id="wa-number"
-              name="whatsapp"
-              placeholder="(832) 000-0000"
-              pattern="[\d\s\-\(\)]{7,15}"
-              maxlength="15"
-              autocomplete="tel"
-              required
-              aria-required="true"
-              aria-describedby="wa-hint"
-            />
-          </div>
-          <small id="wa-hint" class="form-hint">Solo te contactaremos cuando estemos listos para servirte.</small>
+  <!-- HOW IT WORKS -->
+  <section class="bg-[#0d1a2e]">
+    <div class="max-w-screen-xl mx-auto px-6 pt-16 pb-20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <div class="font-bold tracking-widest text-xs text-[#3b82f6] mb-3">EL PROCESO</div>
+          <div class="text-5xl font-black tracking-tighter">Tres pasos. Así de fácil.</div>
         </div>
+        <div class="mt-4 md:mt-0 text-white/70 max-w-xs">Cualquier persona puede enviar algo en menos de 5 minutos.</div>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="bg-[#07101f] p-8 rounded-3xl border border-[#1e3050]">
+          <div class="text-6xl font-black text-white/10 mb-4">01</div>
+          <div class="font-semibold text-2xl mb-3">Elige y ordena</div>
+          <p class="text-white/75">Navega el catálogo. Selecciona productos y servicios de pulperías y negocios locales.</p>
+        </div>
+        <div class="bg-[#07101f] p-8 rounded-3xl border border-[#1e3050]">
+          <div class="text-6xl font-black text-white/10 mb-4">02</div>
+          <div class="font-semibold text-2xl mb-3">Paga en dólares</div>
+          <p class="text-white/75">Paga con tarjeta o Zelle. Procesamos el pedido y coordinamos con tu proveedor.</p>
+        </div>
+        <div class="bg-[#07101f] p-8 rounded-3xl border border-[#1e3050]">
+          <div class="text-6xl font-black text-white/10 mb-4">03</div>
+          <div class="font-semibold text-2xl mb-3">Recibe + confirma</div>
+          <p class="text-white/75">WhatsApp notifica cuando sale el pedido y cuando tu familia lo recibe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="form-group">
-          <label for="ciudad-destino">Ciudad de destino en El Salvador</label>
-          <select id="ciudad-destino" name="ciudad" required aria-required="true">
-            <option value="" disabled selected>Selecciona una ciudad...</option>
+  <!-- WAITLIST / ORDER -->
+  <section id="pedido" class="max-w-screen-xl mx-auto px-6 pt-20 pb-24">
+    <div class="max-w-md mx-auto text-center mb-12">
+      <div class="inline-block bg-[#0d1a2e] text-xs text-[#3b82f6] font-bold tracking-[2px] px-5 py-1 rounded-3xl">LANZAMIENTO PRÓXIMO</div>
+      <h2 class="text-5xl font-black tracking-tight mt-4">Únete a la lista de espera</h2>
+      <p class="text-white/70 mt-4">Sé el primero en enterarte de nuestro lanzamiento en San Miguel y recibe envío gratis en tu primer pedido.</p>
+    </div>
+
+    <div class="max-w-md mx-auto bg-[#0d1a2e] border border-[#1e3050] rounded-3xl p-8">
+      <form id="waitlist-form" class="space-y-5">
+        <div>
+          <label class="block font-medium text-sm mb-2 text-white/90">Tu WhatsApp (EEUU)</label>
+          <div class="relative">
+            <div class="absolute left-4 top-3.5 text-white/40 text-sm">🇺🇸 +1</div>
+            <input type="tel" id="wa-number" required placeholder="(832) 555-0192"
+                   class="pl-16 w-full bg-[#07101f] border border-[#334b6e] text-white rounded-2xl py-3 px-4 placeholder:text-white/40 focus:outline-none focus:border-[#3b82f6]">
+          </div>
+        </div>
+        
+        <div>
+          <label class="block font-medium text-sm mb-2 text-white/90">Ciudad en El Salvador</label>
+          <select id="ciudad-destino" required class="w-full bg-[#07101f] border border-[#334b6e] text-white rounded-2xl py-3 px-4 focus:outline-none focus:border-[#3b82f6]">
+            <option value="">Selecciona una ciudad...</option>
             <option value="san-miguel">San Miguel</option>
             <option value="san-salvador">San Salvador</option>
             <option value="santa-ana">Santa Ana</option>
@@ -238,286 +226,123 @@
           </select>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;margin-top:.5rem;">
+        <button type="submit" 
+                class="w-full bg-[#2563eb] hover:bg-[#3b82f6] py-3.5 rounded-2xl font-semibold transition-all active:scale-[0.985]">
           Avisarme cuando esté disponible →
         </button>
-
-        <p class="form-privacy">🔒 Tu información es privada. Sin spam, sin llamadas de ventas.</p>
-
       </form>
 
-      <!-- Success state (hidden by default) -->
-      <div class="order-success" id="waitlist-success" aria-live="polite" hidden>
-        <div class="success-icon" aria-hidden="true">✅</div>
-        <h3>¡Ya estás en la lista!</h3>
-        <p>Te avisaremos por WhatsApp en cuanto lancemos en tu ciudad. Mientras tanto, si tienes un pedido urgente escríbenos directamente:</p>
-        <a
-          href="https://wa.me/18323624499?text=Hola%20MandarCasa%2C%20quiero%20hacer%20un%20pedido"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-primary btn-lg"
-          style="margin-top:1rem;display:inline-block;"
-        >
+      <div id="waitlist-success" hidden class="text-center pt-2">
+        <div class="text-5xl">✅</div>
+        <div class="font-semibold text-xl pt-4">¡Ya estás en la lista!</div>
+        <p class="text-sm text-white/60">Te avisaremos tan pronto abramos en tu ciudad.</p>
+        
+        <a href="https://wa.me/18323624499?text=Hola%20MandarCasa%2C%20quiero%20hacer%20un%20pedido" 
+           class="mt-4 inline-block px-7 py-3.5 bg-[#10b981] hover:bg-[#059669] text-white font-semibold rounded-2xl text-sm transition">
           💬 Escribir por WhatsApp ahora
         </a>
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- ═══════════════════════════════════════════
-       TESTIMONIALS
-  ═══════════════════════════════════════════ -->
-  <section class="section reveal" id="testimonios" aria-label="Testimonios de clientes">
-
-    <span class="section__label">Lo que dicen nuestros clientes</span>
-    <h2 class="section__title">Familias conectadas,<br />corazones tranquilos</h2>
-
-    <div class="grid-3">
-
-      <article class="testimonial reveal" aria-label="Testimonio de María G.">
-        <div class="testimonial__stars" aria-label="5 estrellas">★★★★★</div>
-        <blockquote>
-          <p>"Le mandé los medicamentos a mi mamá en San Miguel y llegaron en menos de tres horas — algo que nunca creí posible desde aquí en Houston. Ahora uso MandarCasa cada vez que necesito mandarle algo importante a mi familia."</p>
-        </blockquote>
-        <footer class="testimonial__author">
-          <div class="testimonial__avatar" aria-hidden="true">MG</div>
-          <div>
-            <strong>María G.</strong>
-            <span>Houston, TX</span>
-          </div>
-        </footer>
-      </article>
-
-      <article class="testimonial reveal" aria-label="Testimonio de Carlos R.">
-        <div class="testimonial__stars" aria-label="5 estrellas">★★★★★</div>
-        <blockquote>
-          <p>"Mandé una canasta de comida a mis abuelos para su aniversario y hasta les incluyeron flores — todo por un precio justo y sin salir de mi trabajo. La confirmación por WhatsApp me dio mucha tranquilidad de saber que todo llegó bien."</p>
-        </blockquote>
-        <footer class="testimonial__author">
-          <div class="testimonial__avatar" aria-hidden="true">CR</div>
-          <div>
-            <strong>Carlos R.</strong>
-            <span>Pasadena, TX</span>
-          </div>
-        </footer>
-      </article>
-
-      <article class="testimonial reveal" aria-label="Testimonio de Ana L.">
-        <div class="testimonial__stars" aria-label="5 estrellas">★★★★★</div>
-        <blockquote>
-          <p>"Siempre me preocupaba que el dinero que enviaba no se usara en lo que mi familia necesitaba. Con MandarCasa puedo ordenar exactamente lo que necesitan y sé que lo reciben — eso no tiene precio."</p>
-        </blockquote>
-        <footer class="testimonial__author">
-          <div class="testimonial__avatar" aria-hidden="true">AL</div>
-          <div>
-            <strong>Ana L.</strong>
-            <span>Katy, TX</span>
-          </div>
-        </footer>
-      </article>
-
+  <!-- TESTIMONIALS -->
+  <div class="max-w-screen-xl mx-auto px-6 pb-24">
+    <div class="text-center mb-9">
+      <div class="text-[#3b82f6] font-extrabold tracking-[2.5px] text-sm">TESTIMONIOS</div>
+      <h2 class="text-5xl font-black tracking-tighter">Lo que nuestra gente dice</h2>
     </div>
-
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       CTA BANNER
-  ═══════════════════════════════════════════ -->
-  <section class="cta-banner reveal" aria-label="Llamada a la acción">
-    <div class="cta-banner__inner">
-
-      <span class="section__label" style="color:inherit;opacity:.8;">¿Listo para empezar?</span>
-      <h2>Empieza a enviar hoy</h2>
-      <p>Tu familia está esperando. Haz tu primer pedido en menos de 5 minutos o escríbenos por WhatsApp si tienes una solicitud especial.</p>
-
-      <div class="hero__btns" style="margin-top:2rem;">
-        <a href="#pedido" class="btn btn-primary btn-lg">Hacer un pedido →</a>
-        <a
-          href="https://wa.me/18323624499?text=Hola%20MandarCasa%2C%20quiero%20hacer%20un%20pedido"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-outline btn-lg"
-        >
-          💬 Hablar por WhatsApp
-        </a>
+    
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-[#0d1a2e] p-8 border border-[#1e3050] rounded-3xl text-sm">
+        <div class="text-[#f59e0b] text-lg mb-3">★★★★★</div>
+        <p class="text-white/80">"Le mandé los medicamentos a mi mamá en San Miguel. Llegaron en menos de 3 horas. Ahora uso MandarCasa cada vez que necesito mandar algo."</p>
+        <div class="font-semibold mt-4">María G. — <span class="font-normal text-white/60">Houston, TX</span></div>
       </div>
-
+      <div class="bg-[#0d1a2e] p-8 border border-[#1e3050] rounded-3xl text-sm">
+        <div class="text-[#f59e0b] text-lg mb-3">★★★★★</div>
+        <p class="text-white/80">"Mandé una canasta de comida a mis abuelos con flores incluidas. El precio fue justo y la confirmación por WhatsApp me dio tranquilidad total."</p>
+        <div class="font-semibold mt-4">Carlos R. — <span class="font-normal text-white/60">Pasadena, TX</span></div>
+      </div>
+      <div class="bg-[#0d1a2e] p-8 border border-[#1e3050] rounded-3xl text-sm">
+        <div class="text-[#f59e0b] text-lg mb-3">★★★★★</div>
+        <p class="text-white/80">"Ya no me preocupa cómo gastan el dinero que envío. Ahora sé exactamente qué reciben. Eso no tiene precio."</p>
+        <div class="font-semibold mt-4">Ana L. — <span class="font-normal text-white/60">Katy, TX</span></div>
+      </div>
     </div>
-  </section>
+  </div>
 
+  <!-- FINAL CTA -->
+  <div class="border-t border-[#1e3050]">
+    <div class="max-w-screen-xl mx-auto px-6 py-16 text-center">
+      <h3 class="font-black text-4xl tracking-[-1.2px]">Tu familia te necesita.<br>Empieza a enviar hoy.</h3>
+      <div class="pt-7 flex flex-col md:flex-row gap-4 justify-center">
+        <a href="#pedido" class="bg-[#2563eb] text-lg font-semibold px-9 py-4 rounded-2xl inline-block transition-all active:scale-[0.985]">Hacer un pedido</a>
+        <a href="https://wa.me/18323624499" class="inline-flex text-lg px-9 py-4 items-center justify-center border border-[#334b6e] hover:bg-white/5 transition-all active:scale-[0.985] rounded-2xl">💬 Hablar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
 
-  <!-- ═══════════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════════ -->
-  <footer class="footer" role="contentinfo">
-    <div class="footer__grid">
-
-      <!-- Column 1: Brand -->
-      <div class="footer__col footer__col--brand">
-        <a href="index.html" class="nav__logo footer__logo" aria-label="MandarCasa inicio">
-          Mandar<span>Casa</span>
-        </a>
-        <p class="footer__desc">Conectando familias salvadoreñas en EEUU con negocios locales de confianza en El Salvador. Porque la distancia no debería separar a los que amas de lo que necesitan.</p>
-        <div class="footer__social" aria-label="Redes sociales">
-          <a
-            href="https://facebook.com/mandarcasa"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="MandarCasa en Facebook"
-          >
-            <span aria-hidden="true">📘</span> Facebook
-          </a>
-          <a
-            href="https://instagram.com/mandarcasa"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="MandarCasa en Instagram"
-          >
-            <span aria-hidden="true">📸</span> Instagram
-          </a>
-          <a
-            href="https://wa.me/18323624499"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="MandarCasa en WhatsApp"
-          >
-            <span aria-hidden="true">💬</span> WhatsApp
-          </a>
+  <!-- FOOTER -->
+  <footer class="border-top bg-[#0d1a2e] border-[#1e3050]">
+    <div class="max-w-screen-xl mx-auto px-6 pt-16 pb-9 grid md:grid-cols-12 gap-y-14">
+      <div class="md:col-span-4">
+        <div class="font-black text-3xl tracking-tighter mb-3">Mandar<span class="text-[#3b82f6]">Casa</span></div>
+        <div class="text-sm text-white/65 max-w-[260px]">Conectando a salvadoreños en Houston con negocios de confianza en El Salvador.</div>
+      </div>
+      <div class="md:col-span-3 text-sm">
+        <div class="font-semibold mb-4 text-sm tracking-widest text-white/75">SERVICIOS</div>
+        <div class="space-y-[9px] text-white/70">
+          <div>Abarrotes y comida</div>
+          <div>Farmacia</div>
+          <div>Servicios al hogar</div>
+          <div>Regalos y flores</div>
         </div>
       </div>
-
-      <!-- Column 2: Services -->
-      <div class="footer__col">
-        <h4 class="footer__heading">Servicios</h4>
-        <ul role="list">
-          <li><a href="#servicios">Abarrotes y Comida</a></li>
-          <li><a href="#servicios">Farmacia y Medicinas</a></li>
-          <li><a href="#servicios">Servicios al Hogar</a></li>
-          <li><a href="#servicios">Flores y Regalos</a></li>
-          <li><a href="proveedores.html">Para Proveedores</a></li>
-        </ul>
+      <div class="md:col-span-3 text-sm">
+        <div class="font-semibold mb-4 text-sm tracking-widest text-white/75">EMPRESA</div>
+        <div class="grid grid-cols-1 gap-y-[9px] text-white/70">
+          <a href="como-funciona.html" class="hover:text-white">Cómo funciona</a>
+          <a href="proveedores.html" class="hover:text-white">Únete como proveedor</a>
+          <a href="contacto.html" class="hover:text-white">Contacto</a>
+        </div>
       </div>
-
-      <!-- Column 3: Company -->
-      <div class="footer__col">
-        <h4 class="footer__heading">Empresa</h4>
-        <ul role="list">
-          <li><a href="como-funciona.html">Cómo Funciona</a></li>
-          <li><a href="proveedores.html">Únete como Proveedor</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="terminos.html">Términos y Condiciones</a></li>
-          <li><a href="privacidad.html">Política de Privacidad</a></li>
-        </ul>
+      <div class="md:col-span-2 text-sm">
+        <div class="font-semibold mb-4 text-sm tracking-widest text-white/75">CONTACTO</div>
+        <div class="text-white/70 text-sm space-y-px leading-loose">
+          <div>hola@mandarcasa.com</div>
+          <div>+1 832-362-4499</div>
+          <div class="pt-1">Lun–Sáb • 7am–8pm CST</div>
+        </div>
       </div>
-
-      <!-- Column 4: Contact -->
-      <div class="footer__col">
-        <h4 class="footer__heading">Contacto</h4>
-        <address>
-          <ul role="list" class="footer__contact-list">
-            <li>
-              <span aria-hidden="true">✉️</span>
-              <a href="mailto:hola@mandarcasa.com">hola@mandarcasa.com</a>
-            </li>
-            <li>
-              <span aria-hidden="true">📞</span>
-              <a href="tel:+18323624499">+1 832-362-4499</a>
-            </li>
-            <li>
-              <span aria-hidden="true">📍</span>
-              <span>San Miguel, El Salvador</span>
-            </li>
-            <li>
-              <span aria-hidden="true">🕐</span>
-              <span>Lun–Sáb, 7am–8pm CST</span>
-            </li>
-          </ul>
-        </address>
-      </div>
-
-    </div><!-- /footer__grid -->
-
-    <!-- Bottom Bar -->
-    <div class="footer__bottom">
-      <p>&copy; 2025 MandarCasa. Todos los derechos reservados.</p>
-      <p>Hecho con ❤️ para la comunidad salvadoreña en EEUU.</p>
     </div>
-
+    
+    <div class="text-center text-xs pt-4 pb-8 text-white/40 border-t border-[#1e3050]">
+      © 2025 MandarCasa • Hecho con ❤️ para la comunidad salvadoreña
+    </div>
   </footer>
 
-
-  <!-- ═══════════════════════════════════════════
-       WHATSAPP FLOAT BUTTON
-  ═══════════════════════════════════════════ -->
-  <a
-    href="https://wa.me/18323624499?text=Hola%20MandarCasa%2C%20quiero%20hacer%20un%20pedido"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="wa-float"
-    aria-label="Chatear con MandarCasa por WhatsApp"
-    title="Chatea con nosotros"
-  >
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/18323624499?text=Hola%20MandarCasa%2C%20quiero%20hacer%20un%20pedido" 
+     target="_blank"
+     class="fixed bottom-7 right-7 bg-[#25D366] text-white w-14 h-14 rounded-2xl flex items-center justify-center text-3xl shadow-xl shadow-[#25D366]/40 z-50 active:scale-95 transition">
     💬
   </a>
 
-
-  <!-- ═══════════════════════════════════════════
-       SCRIPTS
-  ═══════════════════════════════════════════ -->
   <script src="js/script.js"></script>
-
   <script>
-    // ── Waitlist Form Handler ──────────────────────────────────────────────
-    (function () {
-      var form    = document.getElementById('waitlist-form');
-      var success = document.getElementById('waitlist-success');
-
-      if (!form) return;
-
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        var phone  = document.getElementById('wa-number').value.trim();
-        var ciudad = document.getElementById('ciudad-destino').value;
-
-        if (!phone || !ciudad) {
-          var firstEmpty = !phone
-            ? document.getElementById('wa-number')
-            : document.getElementById('ciudad-destino');
-          firstEmpty.focus();
-          firstEmpty.style.borderColor = 'var(--color-error, #e53e3e)';
-          return;
-        }
-
-        // Simulate async submission (replace with real API call)
-        var btn = form.querySelector('button[type="submit"]');
-        btn.textContent = 'Guardando…';
-        btn.disabled = true;
-
-        setTimeout(function () {
-          form.hidden   = true;
-          success.hidden = false;
-
-          // Optional: log to console for development
-          console.info('MandarCasa waitlist:', { phone: phone, ciudad: ciudad });
-        }, 900);
-      });
-
-      // Reset border on input
-      ['wa-number', 'ciudad-destino'].forEach(function (id) {
-        var el = document.getElementById(id);
-        if (el) {
-          el.addEventListener('input', function () {
-            el.style.borderColor = '';
-          });
-        }
-      });
-    }());
+    // Enhanced waitlist logic (Tailwind friendly success state)
+    document.getElementById('waitlist-form')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('waitlist-form').style.display = 'none';
+      document.getElementById('waitlist-success').hidden = false;
+    });
+    
+    // Mobile menu
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    menuBtn?.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
   </script>
-
 </body>
 </html>

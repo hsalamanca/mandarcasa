@@ -1,345 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto — MandarCasa</title>
-  <meta name="description" content="Contáctanos por WhatsApp, email o el formulario. Estamos listos para ayudarte a enviar lo que tu familia necesita en El Salvador." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <style>
-    /* ── Page-specific: Contact layout ── */
-    .contact-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: start;
-    }
-    @media (max-width: 640px) {
-      .contact-layout { grid-template-columns: 1fr; }
-    }
-
-    /* Info cards */
-    .info-cards { display: flex; flex-direction: column; gap: 16px; }
-    .info-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 22px 20px;
-      display: flex; align-items: flex-start; gap: 16px;
-      transition: border-color var(--transition), transform var(--transition);
-    }
-    .info-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .info-card.whatsapp:hover { border-color: #25D366; }
-    .info-card__icon {
-      width: 48px; height: 48px; flex-shrink: 0;
-      border-radius: 12px; display: flex; align-items: center; justify-content: center;
-      font-size: 1.3rem;
-    }
-    .info-card__icon.green  { background: rgba(37,211,102,0.12); border: 1px solid rgba(37,211,102,0.25); }
-    .info-card__icon.blue   { background: var(--accent-glow);    border: 1px solid rgba(59,130,246,0.25); }
-    .info-card__icon.purple { background: rgba(139,92,246,0.1);  border: 1px solid rgba(139,92,246,0.25); }
-    .info-card__icon.orange { background: rgba(245,158,11,0.1);  border: 1px solid rgba(245,158,11,0.25); }
-    .info-card__label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted2); margin-bottom: 4px; }
-    .info-card__primary { font-size: 0.95rem; font-weight: 700; margin-bottom: 2px; }
-    .info-card__primary a { color: var(--text); transition: color var(--transition); }
-    .info-card__primary a:hover { color: var(--accent-lt); }
-    .info-card.whatsapp .info-card__primary a:hover { color: #25D366; }
-    .info-card__secondary { font-size: 0.8rem; color: var(--muted); }
-
-    /* Contact form card */
-    .form-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px 28px;
-    }
-    .form-card h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 4px; }
-    .form-card .form-card__sub { font-size: 0.85rem; color: var(--muted); margin-bottom: 24px; }
-    .contact-form { display: flex; flex-direction: column; gap: 16px; }
-    .submit-btn {
-      background: var(--accent); color: #fff;
-      border: none; border-radius: 10px;
-      font-family: var(--font); font-size: 1rem; font-weight: 700;
-      padding: 13px 20px; width: 100%;
-      transition: background var(--transition), transform var(--transition);
-    }
-    .submit-btn:hover { background: var(--accent-lt); transform: translateY(-1px); }
-
-    /* FAQ */
-    .faq-list { max-width: 700px; margin: 0 auto; }
-
-    /* CTA */
-    .cta-banner__icon { font-size: 1.2rem; }
-
-    @media (max-width: 520px) {
-      .form-card { padding: 24px 18px; }
-    }
-  </style>
+  <meta name="description" content="Contáctanos por WhatsApp, email o formulario. Estamos aquí para ayudarte a enviar lo que tu familia necesita.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    tailwind.config = {theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}
+  </script>
 </head>
-<body>
+<body class="bg-[#07101f] text-white font-sans">
 
-<!-- ── NAV ── -->
-<header class="nav">
-  <div class="container nav__inner">
-    <a href="index.html" class="nav__logo">Mandar<span>Casa</span></a>
-    <nav aria-label="Principal">
-      <ul class="nav__links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="como-funciona.html">Cómo Funciona</a></li>
-        <li><a href="proveedores.html">Para Proveedores</a></li>
-        <li class="active"><a href="contacto.html">Contacto</a></li>
-        <li><a href="index.html#pedido" class="nav__cta">Enviar ahora →</a></li>
-      </ul>
-    </nav>
-    <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-<nav class="nav__mobile" aria-label="Menú móvil">
-  <a href="index.html">Inicio</a>
-  <a href="como-funciona.html">Cómo Funciona</a>
-  <a href="proveedores.html">Para Proveedores</a>
-  <a href="contacto.html">Contacto</a>
-  <a href="index.html#pedido" class="nav__cta">Enviar ahora →</a>
-</nav>
-
-<!-- ── PAGE HERO ── -->
-<section class="page-hero">
-  <div class="container">
-    <div class="badge">Soporte</div>
-    <h1>Estamos aquí<br /><em>para ayudarte</em></h1>
-    <p>Escríbenos por WhatsApp, por email o usa el formulario.<br /> Respondemos en menos de una hora durante horas hábiles.</p>
-  </div>
-</section>
-
-<!-- ── CONTACT MAIN SECTION ── -->
-<section class="section reveal">
-  <div class="container">
-    <div class="contact-layout">
-
-      <!-- LEFT: Info cards -->
-      <div class="info-cards">
-
-        <div class="info-card whatsapp">
-          <div class="info-card__icon green">💬</div>
-          <div>
-            <div class="info-card__label">WhatsApp — Más rápido</div>
-            <div class="info-card__primary">
-              <a href="https://wa.me/18323624499" target="_blank" rel="noopener">+1 832-362-4499</a>
-            </div>
-            <div class="info-card__secondary">Respondemos en menos de 60 minutos. Lunes a sábado de 8 am a 8 pm (CT).</div>
-          </div>
-        </div>
-
-        <div class="info-card">
-          <div class="info-card__icon blue">✉️</div>
-          <div>
-            <div class="info-card__label">Email</div>
-            <div class="info-card__primary">
-              <a href="mailto:hola@mandarcasa.com">hola@mandarcasa.com</a>
-            </div>
-            <div class="info-card__secondary">Para consultas detalladas, reclamos o colaboraciones. Respondemos en 24 horas.</div>
-          </div>
-        </div>
-
-        <div class="info-card">
-          <div class="info-card__icon purple">📍</div>
-          <div>
-            <div class="info-card__label">Ubicación</div>
-            <div class="info-card__primary">Houston, Texas, EE. UU.</div>
-            <div class="info-card__secondary">Servicio para salvadoreños en el área de Houston y Greater Houston Area.</div>
-          </div>
-        </div>
-
-        <div class="info-card">
-          <div class="info-card__icon orange">🕐</div>
-          <div>
-            <div class="info-card__label">Horario de atención</div>
-            <div class="info-card__primary">Lunes – Sábado</div>
-            <div class="info-card__secondary">8:00 am – 8:00 pm (hora central, CT). Domingo: atención limitada por WhatsApp.</div>
-          </div>
-        </div>
-
-      </div><!-- /info-cards -->
-
-      <!-- RIGHT: Contact form -->
-      <div class="form-card">
-        <h3>Envíanos un mensaje</h3>
-        <p class="form-card__sub">¿Tienes preguntas sobre un pedido, quieres más información o reportar un problema? Completa el formulario y te contactamos pronto.</p>
-
-        <form id="contactForm" class="contact-form" novalidate>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="nombre">Nombre completo *</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="name" />
-            </div>
-            <div class="form-group">
-              <label for="email">Correo electrónico *</label>
-              <input type="email" id="email" name="email" placeholder="tu@email.com" required autocomplete="email" />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="telefono">Teléfono / WhatsApp <span style="color:var(--muted2); font-weight:400;">(opcional)</span></label>
-            <input type="tel" id="telefono" name="telefono" placeholder="+1 (713) 000-0000" autocomplete="tel" />
-          </div>
-
-          <div class="form-group">
-            <label for="asunto">Asunto *</label>
-            <select id="asunto" name="asunto" required>
-              <option value="" disabled selected>Selecciona un tema</option>
-              <option value="pedido">Pregunta sobre un pedido</option>
-              <option value="pago">Problema con el pago</option>
-              <option value="entrega">Problema con una entrega</option>
-              <option value="proveedor">Quiero ser proveedor</option>
-              <option value="cobertura">Consulta sobre cobertura</option>
-              <option value="otro">Otro</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="mensaje">Mensaje *</label>
-            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos cómo podemos ayudarte. Entre más detalles nos des, más rápido podremos asistirte." required></textarea>
-          </div>
-
-          <button type="submit" class="submit-btn">Enviar mensaje →</button>
-
-          <p style="font-size:0.78rem; color:var(--muted2); text-align:center; margin-top: -4px;">Al enviar, aceptas que te contactemos por email o WhatsApp para responderte.</p>
-        </form>
-
-        <!-- Success state -->
-        <div id="contactSuccess" class="success-box">
-          <h3>✅ ¡Mensaje recibido!</h3>
-          <p>Gracias por escribirnos. Te responderemos al correo o WhatsApp proporcionado en menos de una hora (horario hábil).<br /><br /> Si es urgente, escríbenos directamente al <a href="https://wa.me/18323624499" target="_blank" rel="noopener" style="color:var(--green);">WhatsApp +1 832-362-4499</a>.</p>
-        </div>
-      </div><!-- /form-card -->
-
-    </div><!-- /contact-layout -->
-  </div>
-</section>
-
-<!-- ── FAQ ── -->
-<section class="section reveal" style="padding-top: 0;">
-  <div class="container">
-    <p class="section__label">Preguntas frecuentes</p>
-    <h2 class="section__title">Respuestas rápidas</h2>
-    <p class="section__sub">Las preguntas más comunes de nuestros clientes en Houston.</p>
-
-    <div class="faq-list">
-      <details class="faq-item">
-        <summary>¿Cómo hago mi primer pedido?</summary>
-        <p>Es muy sencillo: escríbenos por WhatsApp al <strong>+1 832-362-4499</strong> indicando qué quieres enviar, la dirección de entrega en El Salvador y el nombre de quien recibe. Te enviamos el total a pagar, confirmas el pago y nosotros coordinamos la entrega. ¡Así de simple!</p>
-      </details>
-
-      <details class="faq-item">
-        <summary>¿Cuánto cuesta el servicio?</summary>
-        <p>El costo del pedido incluye el precio del producto más una tarifa de servicio y entrega que varía según la distancia y el proveedor. Te informamos el costo total antes de que confirmes tu pago — sin sorpresas ni cobros ocultos.</p>
-      </details>
-
-      <details class="faq-item">
-        <summary>¿Qué hago si mi pedido llega incompleto o con algún problema?</summary>
-        <p>Escríbenos de inmediato por WhatsApp con el número de tu pedido y una foto si es posible. Revisamos el caso con el proveedor y te ofrecemos una solución: reenvío del producto faltante o reembolso parcial, según corresponda. Tu satisfacción es nuestra prioridad.</p>
-      </details>
-
-      <details class="faq-item">
-        <summary>¿Pueden entregar en una dirección diferente a la de mi familia?</summary>
-        <p>¡Claro que sí! Puedes enviar a cualquier dirección dentro de nuestras zonas de cobertura: una amiga, un evento, una oficina. Solo indícanos la dirección completa, el nombre de quien recibe y su número de teléfono para coordinar la entrega.</p>
-      </details>
-
-      <details class="faq-item">
-        <summary>¿Cómo me entero cuando mi pedido fue entregado?</summary>
-        <p>Recibirás una notificación por WhatsApp con una <strong>fotografía de confirmación</strong> tomada en el momento de la entrega. Así puedes estar seguro/a de que tu familia recibió todo en orden, sin necesidad de hacer llamadas internacionales.</p>
-      </details>
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 border-b border-[#1e3050] bg-[#07101f]/95 backdrop-blur">
+    <div class="max-w-screen-xl px-6 mx-auto flex h-16 items-center justify-between">
+      <a href="index.html" class="font-black tracking-tighter text-2xl">Mandar<span class="text-[#3b82f6]">Casa</span></a>
+      <div class="hidden md:flex font-medium gap-8 text-sm">
+        <a href="index.html">Inicio</a>
+        <a href="como-funciona.html">Cómo Funciona</a>
+        <a href="proveedores.html">Para Proveedores</a>
+        <a href="contacto.html" class="text-[#3b82f6]">Contacto</a>
+      </div>
+      <a href="https://wa.me/18323624499" class="text-sm">💬 WhatsApp</a>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- ── CTA BANNER — VENDOR ── -->
-<section class="section reveal" style="padding-top: 0;">
-  <div class="container">
-    <div class="cta-banner">
-      <h2>¿Tienes un negocio en El Salvador?</h2>
-      <p>Únete a MandarCasa como proveedor y empieza a recibir clientes desde Houston. El registro es gratis y sin contratos. Solo pagas cuando vendes.</p>
-      <div class="cta-banner__btns">
-        <a href="proveedores.html" class="btn btn-primary btn-lg">
-          <span class="cta-banner__icon">🏪</span> Registrar mi negocio gratis
-        </a>
-        <a href="https://wa.me/18323624499" target="_blank" rel="noopener" class="btn btn-outline btn-lg">
-          <span class="cta-banner__icon">💬</span> Preguntar por WhatsApp
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── FOOTER ── -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__grid">
-
-      <!-- Brand + Social -->
-      <div>
-        <div class="footer__brand-logo">Mandar<span>Casa</span></div>
-        <p class="footer__brand-desc">Conectando a las familias salvadoreñas en Houston con los negocios que aman en El Salvador. Rápido, seguro y en dólares.</p>
-        <div class="footer__social">
-          <a href="https://wa.me/18323624499" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
-          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
-          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
-        </div>
-      </div>
-
-      <!-- Servicios -->
-      <div class="footer__col">
-        <h4>Servicios</h4>
-        <ul>
-          <li><a href="index.html#pedido">Enviar comida</a></li>
-          <li><a href="index.html#pedido">Enviar medicinas</a></li>
-          <li><a href="index.html#pedido">Enviar flores y regalos</a></li>
-          <li><a href="index.html#pedido">Abarrotes y artículos del hogar</a></li>
-          <li><a href="index.html#pedido">Servicios a domicilio</a></li>
-        </ul>
-      </div>
-
-      <!-- Empresa -->
-      <div class="footer__col">
-        <h4>Empresa</h4>
-        <ul>
-          <li><a href="como-funciona.html">Cómo funciona</a></li>
-          <li><a href="proveedores.html">Para proveedores</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="#">Términos y condiciones</a></li>
-          <li><a href="#">Política de privacidad</a></li>
-        </ul>
-      </div>
-
-      <!-- Contacto -->
-      <div class="footer__col">
-        <h4>Contacto</h4>
-        <ul>
-          <li><a href="mailto:hola@mandarcasa.com">hola@mandarcasa.com</a></li>
-          <li><a href="tel:+18323624499">+1 832-362-4499</a></li>
-          <li><a href="https://wa.me/18323624499" target="_blank" rel="noopener">WhatsApp</a></li>
-          <li><span style="color: var(--muted2); font-size: 0.875rem;">Houston, Texas</span></li>
-        </ul>
-      </div>
-
+  <div class="max-w-screen-xl mx-auto px-6 pt-16 pb-24">
+    <div class="text-center max-w-md mx-auto mb-9">
+      <div class="font-extrabold tracking-widest text-xs text-[#3b82f6]">HABLEMOS</div>
+      <h1 class="font-black tracking-tighter text-6xl pt-2">Estamos aquí para ti</h1>
     </div>
 
-    <div class="footer__bottom">
-      <span>© 2025 MandarCasa. Todos los derechos reservados.</span>
-      <span>Hecho con ❤️ para las familias salvadoreñas</span>
+    <!-- Contact options -->
+    <div class="grid md:grid-cols-3 gap-5 max-w-3xl mx-auto">
+      <div class="bg-[#0d1a2e] rounded-3xl p-8 border border-[#1e3050] text-center">
+        <div class="mx-auto w-12 h-12 flex items-center justify-center rounded-2xl bg-emerald-500/10 text-3xl mb-5">📱</div>
+        <div class="font-semibold">WhatsApp</div>
+        <a href="https://wa.me/18323624499" class="text-emerald-400 block mt-px">+1 (832) 362-4499</a>
+      </div>
+      <div class="bg-[#0d1a2e] rounded-3xl p-8 border border-[#1e3050] text-center">
+        <div class="mx-auto w-12 h-12 flex items-center justify-center rounded-2xl bg-[#2563eb]/10 text-3xl mb-5">✉️</div>
+        <div class="font-semibold">Email</div>
+        <a href="mailto:hola@mandarcasa.com" class="text-[#3b82f6] mt-px block">hola@mandarcasa.com</a>
+      </div>
+      <div class="bg-[#0d1a2e] rounded-3xl p-8 border border-[#1e3050] text-center">
+        <div class="mx-auto w-12 h-12 flex items-center justify-center rounded-2xl bg-amber-500/10 text-3xl mb-5">🕒</div>
+        <div class="font-semibold">Horario</div>
+        <div class="text-sm text-white/75 mt-px">Lun–Sáb • 7am–8pm CST</div>
+      </div>
+    </div>
+
+    <!-- Contact form -->
+    <div class="max-w-lg mx-auto mt-14">
+      <form id="contactForm" class="bg-[#0d1a2e] border border-[#1e3050] p-8 rounded-3xl space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-xs font-bold tracking-widest block mb-1.5">Nombre</label>
+            <input required type="text" placeholder="Tu nombre" class="rounded-2xl bg-[#07101f] border border-[#334b6e] w-full py-3 px-4">
+          </div>
+          <div>
+            <label class="text-xs font-bold tracking-widest block mb-1.5">WhatsApp / Teléfono</label>
+            <input required type="tel" placeholder="+1 832-XXX-XXXX" class="rounded-2xl bg-[#07101f] border border-[#334b6e] w-full py-3 px-4">
+          </div>
+        </div>
+        <div>
+          <label class="block mb-1.5 text-xs font-bold tracking-widest">¿En qué podemos ayudarte?</label>
+          <textarea rows="4" required class="rounded-2xl w-full border px-4 py-3 border-[#334b6e] bg-[#07101f]" placeholder="Cuéntanos más detalles..."></textarea>
+        </div>
+        <button class="w-full py-3.5 text-lg bg-[#2563eb] hover:bg-[#3b82f6] font-bold rounded-2xl">Enviar mensaje</button>
+      </form>
+      
+      <div id="contactSuccess" hidden class="text-center mt-4 text-emerald-400 text-sm">¡Gracias! Te responderemos pronto.</div>
     </div>
   </div>
-</footer>
 
-<!-- ── WHATSAPP FLOAT ── -->
-<a href="https://wa.me/18323624499" class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">💬</a>
-
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

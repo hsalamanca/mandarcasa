@@ -1,572 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Registra tu negocio en MandarCasa y empieza a recibir pedidos de salvadoreños en Houston, Texas. Sin costo inicial, sin contratos. Solo pagas cuando vendes." />
-  <meta name="keywords" content="proveedor MandarCasa, negocio El Salvador, pedidos Houston, diaspora salvadoreña, vender desde San Miguel" />
-  <meta property="og:title" content="Para Proveedores — MandarCasa" />
-  <meta property="og:description" content="Conecta tu negocio en El Salvador con clientes en los Estados Unidos. Regístrate gratis hoy." />
-  <meta property="og:type" content="website" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Para Proveedores — MandarCasa</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-</head>
-<body class="page-proveedores">
-
-  <!-- ═══════════════════════════════════════════
-       NAVIGATION
-  ════════════════════════════════════════════ -->
-  <header class="nav" id="nav">
-    <div class="container nav__inner">
-
-      <!-- Logo -->
-      <a href="index.html" class="nav__logo" aria-label="MandarCasa – Inicio">
-        Mandar<span>Casa</span>
-      </a>
-
-      <!-- Desktop links -->
-      <nav class="nav__links" aria-label="Navegación principal">
-        <a href="index.html">Inicio</a>
-        <a href="como-funciona.html">Cómo Funciona</a>
-        <a href="proveedores.html" class="active" aria-current="page">Para Proveedores</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
-
-      <!-- Desktop CTA -->
-      <a href="#registro" class="btn btn-primary nav__cta">Registrarme gratis →</a>
-
-      <!-- Hamburger -->
-      <button class="nav__hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMobile">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-    </div>
-
-    <!-- Mobile menu -->
-    <nav class="nav__mobile" id="navMobile" aria-label="Menú móvil" aria-hidden="true">
-      <a href="index.html">Inicio</a>
-      <a href="como-funciona.html">Cómo Funciona</a>
-      <a href="proveedores.html" class="active" aria-current="page">Para Proveedores</a>
-      <a href="contacto.html">Contacto</a>
-      <a href="#registro" class="btn btn-primary" style="margin-top:8px;">Registrarme gratis →</a>
-    </nav>
-  </header>
-
-
-  <main>
-
-    <!-- ═══════════════════════════════════════════
-         HERO
-    ════════════════════════════════════════════ -->
-    <section class="hero hero--vendors">
-      <div class="container hero__inner">
-
-        <span class="badge badge--flag">🇸🇻 Para negocios en El Salvador</span>
-
-        <h1 class="hero__title">
-          Recibe clientes de <em>los Estados Unidos</em>
-        </h1>
-
-        <p class="hero__subtitle">MandarCasa conecta tu negocio en San Miguel y el resto de El Salvador con miles de familias salvadoreñas en Houston que quieren apoyar a los suyos. Acepta pedidos, entrega localmente y cobra sin complicaciones.</p>
-
-        <div class="hero__actions">
-          <a href="#registro" class="btn btn-primary btn-lg">
-            Registrar mi negocio gratis →
-          </a>
-          <a href="https://wa.me/18323624499" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.862L.057 23.617a.5.5 0 0 0 .612.612l5.755-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.848 0-3.584-.5-5.077-1.375l-.364-.214-3.415.875.892-3.33-.234-.38A9.944 9.944 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Hablar por WhatsApp </a> </div> <p class="hero__note">Sin contratos · Sin costo inicial · Solo pagas cuando vendes</p>
-
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════
-         STATS STRIP
-    ════════════════════════════════════════════ -->
-    <section class="stats-strip reveal">
-      <div class="container stats-strip__grid">
-
-        <div class="stat">
-          <span class="stat__number">$8B+</span>
-          <span class="stat__label">en remesas enviadas a El Salvador cada año</span>
-        </div>
-
-        <div class="stat stat--divider">
-          <span class="stat__number">3M+</span>
-          <span class="stat__label">salvadoreños viviendo en los Estados Unidos</span>
-        </div>
-
-        <div class="stat">
-          <span class="stat__number">$0</span>
-          <span class="stat__label">para registrar tu negocio en MandarCasa</span>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════
-         HOW IT WORKS (vendor view)
-    ════════════════════════════════════════════ -->
-    <section class="section how-it-works reveal">
-      <div class="container">
-
-        <div class="section-header">
-          <span class="section-label">Así de fácil</span>
-          <h2>Tres pasos para empezar a vender</h2>
-          <p class="section-sub">Ser proveedor MandarCasa no requiere tecnología especial ni inversión inicial. Si tienes WhatsApp, tienes todo lo que necesitas.</p>
-        </div>
-
-        <div class="steps-grid">
-
-          <div class="step-card">
-            <div class="step-card__number" aria-hidden="true">01</div>
-            <div class="step-card__icon" aria-hidden="true">📋</div>
-            <h3 class="step-card__title">Regístrate gratis</h3>
-            <p class="step-card__desc">Completa el formulario con el nombre de tu negocio, la categoría y tu número de WhatsApp. Nuestro equipo se pone en contacto contigo en menos de 24 horas para confirmar tu registro y orientarte en los siguientes pasos.</p>
-            <span class="step-card__badge">Confirmación en &lt; 24 horas por WhatsApp</span>
-          </div>
-
-          <div class="step-card">
-            <div class="step-card__number" aria-hidden="true">02</div>
-            <div class="step-card__icon" aria-hidden="true">📝</div>
-            <h3 class="step-card__title">Crea tu menú</h3>
-            <p class="step-card__desc">Te enviamos una plantilla sencilla donde listas tus productos o servicios con fotos, precios y zona de entrega. Tú decides qué ofrecer y a qué precio. MandarCasa publica tu catálogo para que los clientes en Houston puedan verlo.</p>
-            <span class="step-card__badge">Tú fijas precios y zona de cobertura</span>
-          </div>
-
-          <div class="step-card">
-            <div class="step-card__number" aria-hidden="true">03</div>
-            <div class="step-card__icon" aria-hidden="true">💰</div>
-            <h3 class="step-card__title">Recibe pedidos y cobra</h3>
-            <p class="step-card__desc">Cuando un cliente en Houston haga un pedido, recibes la notificación por WhatsApp con todos los detalles: qué quiere, dónde entregarlo y cuándo. Entregas localmente y cobras tu parte en efectivo o transferencia. Simple.</p>
-            <span class="step-card__badge">Pedidos por WhatsApp · Entrega local · Cobro directo</span>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════
-         BENEFITS
-    ════════════════════════════════════════════ -->
-    <section class="section benefits reveal" style="background: var(--surface);">
-      <div class="container">
-
-        <div class="section-header">
-          <span class="section-label">Beneficios</span>
-          <h2>¿Por qué trabajar con MandarCasa?</h2>
-          <p class="section-sub">Diseñamos la plataforma pensando en negocios locales salvadoreños que quieren crecer sin complicarse la vida.</p>
-        </div>
-
-        <div class="benefits-grid grid-2">
-
-          <div class="card card--benefit">
-            <div class="card__icon" aria-hidden="true">💵</div>
-            <div class="card__body">
-              <h3 class="card__title">Pagos garantizados en USD</h3>
-              <p class="card__desc">Los clientes en Houston pagan antes de que proceses el pedido. No corres el riesgo de entregar sin cobrar. El monto en dólares queda confirmado de antemano para que puedas planificar con seguridad.</p>
-            </div>
-          </div>
-
-          <div class="card card--benefit">
-            <div class="card__icon" aria-hidden="true">📱</div>
-            <div class="card__body">
-              <h3 class="card__title">Todo por WhatsApp</h3>
-              <p class="card__desc">Sin apps nuevas que aprender, sin portales complicados. Recibes los pedidos, confirmas la entrega y te comunicamos cualquier novedad directamente a tu número de WhatsApp, la herramienta que ya usas todos los días.</p>
-            </div>
-          </div>
-
-          <div class="card card--benefit">
-            <div class="card__icon" aria-hidden="true">🆓</div>
-            <div class="card__body">
-              <h3 class="card__title">15 % de comisión, cero costo fijo</h3>
-              <p class="card__desc">Solo pagamos juntos cuando hay una venta concreta. MandarCasa retiene el 15 % como comisión por gestionar la plataforma, el cobro en Houston y el soporte al cliente. Si no vendes, no pagas nada.</p>
-            </div>
-          </div>
-
-          <div class="card card--benefit">
-            <div class="card__icon" aria-hidden="true">📈</div>
-            <div class="card__body">
-              <h3 class="card__title">Nuevos clientes sin publicidad</h3>
-              <p class="card__desc">Tu negocio aparece ante miles de salvadoreños en Houston que buscan activamente apoyar a negocios de su tierra. Tú no tienes que invertir en marketing; MandarCasa hace el trabajo de conectarte con esa comunidad.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════
-         CATEGORIES
-    ════════════════════════════════════════════ -->
-    <section class="section categories reveal">
-      <div class="container">
-
-        <div class="section-header">
-          <span class="section-label">Categorías</span>
-          <h2>¿Qué tipo de negocio puedes registrar?</h2>
-          <p class="section-sub">Cualquier negocio local que pueda entregar en El Salvador es bienvenido. Estas son las categorías más solicitadas por nuestra comunidad:</p>
-        </div>
-
-        <div class="chips-wrap">
-          <span class="chip">🍽️ Restaurantes y pupuserías</span>
-          <span class="chip">🛒 Abarroterías y supermercados</span>
-          <span class="chip">🎂 Pastelerías y panaderías</span>
-          <span class="chip">💐 Floristerías y decoración</span>
-          <span class="chip">🧴 Farmacias y productos de salud</span>
-          <span class="chip">🎁 Regalos y artículos personalizados</span>
-          <span class="chip">👗 Ropa y accesorios</span>
-          <span class="chip">🏠 Servicios para el hogar</span>
-        </div>
-
-        <p class="categories__note">¿Tu categoría no aparece en la lista? <a href="#registro">Regístrate igual</a> y cuéntanos qué ofreces. Siempre estamos ampliando el catálogo.</p>
-
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════
-         SIGNUP FORM
-    ════════════════════════════════════════════ -->
-    <section id="registro" class="section section--form reveal" style="background: var(--surface); padding: 64px 0;">
-      <div class="container">
-
-        <div class="form-wrapper">
-
-          <div class="form-header">
-            <span class="section-label">Registro de proveedores</span>
-            <h2>Empieza hoy — es gratis</h2>
-            <p class="section-sub">Completa el formulario y nuestro equipo te contactará por WhatsApp en menos de 24 horas para finalizar tu registro y publicar tu negocio.</p>
-          </div>
-
-          <form id="vendorForm" class="vendor-form" novalidate>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="nombre">Nombre del negocio <span class="req" aria-hidden="true">*</span></label>
-                <input
-                  type="text"
-                  id="nombre"
-                  name="nombre"
-                  class="form-control"
-                  placeholder="Ej. Pupusería Doña Rosa"
-                  required
-                  autocomplete="organization"
-                />
-                <span class="form-error" role="alert" aria-live="polite"></span>
-              </div>
-
-              <div class="form-group">
-                <label for="categoria">Categoría <span class="req" aria-hidden="true">*</span></label>
-                <select id="categoria" name="categoria" class="form-control" required>
-                  <option value="" disabled selected>Selecciona una categoría</option>
-                  <option value="restaurante">🍽️ Restaurante o pupusería</option>
-                  <option value="abarroteria">🛒 Abarrotería o supermercado</option>
-                  <option value="pasteleria">🎂 Pastelería o panadería</option>
-                  <option value="floristeria">💐 Floristería o decoración</option>
-                  <option value="farmacia">🧴 Farmacia o salud</option>
-                  <option value="regalos">🎁 Regalos y artículos personalizados</option>
-                  <option value="ropa">👗 Ropa y accesorios</option>
-                  <option value="hogar">🏠 Servicios para el hogar</option>
-                  <option value="otro">✨ Otro</option>
-                </select>
-                <span class="form-error" role="alert" aria-live="polite"></span>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="whatsapp">Número de WhatsApp <span class="req" aria-hidden="true">*</span></label>
-                <input
-                  type="tel"
-                  id="whatsapp"
-                  name="whatsapp"
-                  class="form-control"
-                  placeholder="Ej. +503 7000-0000"
-                  required
-                  autocomplete="tel"
-                />
-                <span class="form-hint">Incluye el código de país (+503 para El Salvador)</span>
-                <span class="form-error" role="alert" aria-live="polite"></span>
-              </div>
-
-              <div class="form-group">
-                <label for="ciudad">Ciudad o municipio <span class="req" aria-hidden="true">*</span></label>
-                <input
-                  type="text"
-                  id="ciudad"
-                  name="ciudad"
-                  class="form-control"
-                  placeholder="Ej. San Miguel, El Tránsito"
-                  required
-                  autocomplete="address-level2"
-                />
-                <span class="form-error" role="alert" aria-live="polite"></span>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="descripcion">Cuéntanos sobre tu negocio</label>
-              <textarea
-                id="descripcion"
-                name="descripcion"
-                class="form-control"
-                rows="4"
-                placeholder="¿Qué vendes? ¿Cuál es tu especialidad? ¿Tienes horario de atención? Cualquier detalle que nos ayude a presentar mejor tu negocio."
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-lg submit-btn" style="width: 100%;">
-              Registrar mi negocio gratis →
-            </button>
-
-            <p class="form-disclaimer">Al registrarte aceptas nuestros <a href="terminos.html">Términos de Servicio</a>. Tu información es privada y nunca la compartimos con terceros.</p>
-
-          </form>
-
-          <!-- Success message (hidden by default, shown by JS) -->
-          <div id="vendorSuccess" class="success-box" hidden aria-live="polite" role="status">
-            <div class="success-box__icon" aria-hidden="true">✅</div>
-            <h3 class="success-box__title">¡Registro recibido!</h3>
-            <p class="success-box__msg">Gracias por registrar tu negocio. Nuestro equipo revisará tu solicitud y te escribirá por WhatsApp en menos de 24 horas para confirmar tu cuenta y ayudarte a publicar tu catálogo.</p>
-            <a href="https://wa.me/18323624499" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 16px;">
-              Escribirnos ahora por WhatsApp
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════
-         FAQ
-    ════════════════════════════════════════════ -->
-    <section class="section faq reveal">
-      <div class="container">
-
-        <div class="section-header">
-          <span class="section-label">Preguntas frecuentes</span>
-          <h2>Todo lo que necesitas saber</h2>
-        </div>
-
-        <div class="faq-list">
-
-          <details class="faq-item">
-            <summary class="faq-item__question">
-              ¿Cuánto me cuesta ser proveedor de MandarCasa?
-              <span class="faq-item__icon" aria-hidden="true">+</span>
-            </summary>
-            <div class="faq-item__answer">
-              <p>Registrarte es completamente gratuito. No hay cuota mensual, no hay contrato mínimo. MandarCasa cobra una comisión del 15 % únicamente cuando se concreta una venta. Si en un mes no recibes pedidos, no pagas nada. Solo pagamos juntos cuando hay resultados reales.</p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-item__question">
-              ¿Necesito tener una tienda en línea o tecnología especial?
-              <span class="faq-item__icon" aria-hidden="true">+</span>
-            </summary>
-            <div class="faq-item__answer">
-              <p>No. Todo el proceso funciona a través de WhatsApp, la aplicación que ya usas en tu día a día. Nuestro equipo te envía una plantilla sencilla para que listes tus productos con fotos y precios. Nosotros nos encargamos de publicar tu catálogo y de gestionar los pedidos de los clientes en Houston. Tu trabajo es entregar el producto localmente y cobrar tu parte.</p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-item__question">
-              ¿Cómo recibo el pago por mis ventas?
-              <span class="faq-item__icon" aria-hidden="true">+</span>
-            </summary>
-            <div class="faq-item__answer">
-              <p>El cliente en Houston paga en dólares antes de que proceses el pedido. Ese dinero queda confirmado y MandarCasa te informa del monto que te corresponde (precio acordado menos el 15 % de comisión). Puedes recibir tu pago en efectivo a través de agencias de remesas locales, por transferencia bancaria o por el método que acordemos al momento de tu registro. Coordinamos el proceso contigo desde el inicio.</p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-item__question">
-              ¿Solo puedo vender en San Miguel o puedo estar en otra ciudad?
-              <span class="faq-item__icon" aria-hidden="true">+</span>
-            </summary>
-            <div class="faq-item__answer">
-              <p>Estamos comenzando en San Miguel porque ahí es donde se concentra la primera comunidad de clientes que atendemos desde Houston. Sin embargo, estamos creciendo rápidamente y nos interesa incorporar negocios en Santa Ana, San Salvador, Usulután y otras ciudades del país. Si tu negocio está fuera de San Miguel, regístrate de todas formas e indícanos tu ciudad: los incluiremos en la siguiente expansión y te avisaremos cuando empecemos a operar en tu área.</p>
-            </div>
-          </details>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════
-         CTA BANNER
-    ════════════════════════════════════════════ -->
-    <section class="cta-banner reveal">
-      <div class="container cta-banner__inner">
-
-        <div class="cta-banner__text">
-          <h2 class="cta-banner__title">¿Tienes preguntas?</h2>
-          <p class="cta-banner__sub">Nuestro equipo está listo para ayudarte a dar el primer paso. Escríbenos por WhatsApp o revisa cómo funciona la plataforma para clientes.</p>
-        </div>
-
-        <div class="cta-banner__actions">
-          <a href="https://wa.me/18323624499" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.862L.057 23.617a.5.5 0 0 0 .612.612l5.755-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.848 0-3.584-.5-5.077-1.375l-.364-.214-3.415.875.892-3.33-.234-.38A9.944 9.944 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Escribirnos por WhatsApp </a> <a href="como-funciona.html" class="btn btn-outline btn-lg btn-outline--light"> Ver cómo funciona </a> </div> </div> </section> </main> <!-- ═══════════════════════════════════════════ FOOTER ════════════════════════════════════════════ --> <footer class="footer"> <div class="container footer__grid"> <!-- Col 1: Brand + social --> <div class="footer__col footer__col--brand"> <a href="index.html" class="footer__logo" aria-label="MandarCasa – Inicio"> Mandar<span>Casa</span> </a> <p class="footer__tagline">Conectamos a la familia salvadoreña en Houston con los negocios que aman en casa.</p>
-        <div class="footer__social">
-          <a href="https://wa.me/18323624499" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp MandarCasa">
-            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.862L.057 23.617a.5.5 0 0 0 .612.612l5.755-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.848 0-3.584-.5-5.077-1.375l-.364-.214-3.415.875.892-3.33-.234-.38A9.944 9.944 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> </a> <a href="https://instagram.com/mandarcasa" target="_blank" rel="noopener noreferrer" aria-label="Instagram MandarCasa"> <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> </a> <a href="https://facebook.com/mandarcasa" target="_blank" rel="noopener noreferrer" aria-label="Facebook MandarCasa"> <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> </a> </div> </div> <!-- Col 2: Servicios --> <div class="footer__col"> <h4 class="footer__heading">Servicios</h4> <ul class="footer__links"> <li><a href="como-funciona.html">Cómo Funciona</a></li> <li><a href="proveedores.html">Para Proveedores</a></li> <li><a href="index.html#categorias">Categorías</a></li> <li><a href="index.html#pedidos">Hacer un Pedido</a></li> </ul> </div> <!-- Col 3: Empresa --> <div class="footer__col"> <h4 class="footer__heading">Empresa</h4> <ul class="footer__links"> <li><a href="nosotros.html">Quiénes Somos</a></li> <li><a href="contacto.html">Contacto</a></li> <li><a href="terminos.html">Términos de Servicio</a></li> <li><a href="privacidad.html">Política de Privacidad</a></li> </ul> </div> <!-- Col 4: Contacto --> <div class="footer__col"> <h4 class="footer__heading">Contacto</h4> <ul class="footer__contact"> <li> <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.862L.057 23.617a.5.5 0 0 0 .612.612l5.755-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.848 0-3.584-.5-5.077-1.375l-.364-.214-3.415.875.892-3.33-.234-.38A9.944 9.944 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> <a href="https://wa.me/18323624499" target="_blank" rel="noopener noreferrer">+1 832-362-4499</a> </li> <li> <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> <a href="mailto:hola@mandarcasa.com">hola@mandarcasa.com</a> </li> <li> <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> <span>San Miguel, El Salvador</span> </li> </ul> </div> </div> <div class="footer__bottom"> <div class="container"> <p>&copy; <span id="footerYear"></span> MandarCasa. Todos los derechos reservados. Hecho con ❤️ para la comunidad salvadoreña.</p>
-      </div>
-    </div>
-  </footer>
-
-
-  <!-- ═══════════════════════════════════════════
-       WHATSAPP FLOAT BUTTON
-  ════════════════════════════════════════════ -->
-  <a
-    href="https://wa.me/18323624499"
-    class="whatsapp-float"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Contactar por WhatsApp"
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.862L.057 23.617a.5.5 0 0 0 .612.612l5.755-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.848 0-3.584-.5-5.077-1.375l-.364-.214-3.415.875.892-3.33-.234-.38A9.944 9.944 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
-    </svg>
-  </a>
-
-
-  <script src="js/config.js"></script>
-  <script src="js/script.js"></script>
-
-  <!-- Inline page-specific JS (vendor form + footer year) -->
+  <meta name="description" content="Registra tu negocio y recibe pedidos de familias salvadoreñas en Houston. Gratis, sin contratos.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
   <script>
-    // ── Footer year ─────────────────────────────────
-    document.getElementById('footerYear').textContent = new Date().getFullYear();
-
-    // ── Vendor form submission ───────────────────────
-    (function () {
-      const form       = document.getElementById('vendorForm');
-      const successBox = document.getElementById('vendorSuccess');
-      if (!form || !successBox) return;
-
-      // Simple inline validation helpers
-      function showError(field, msg) {
-        const err = field.parentElement.querySelector('.form-error');
-        field.classList.add('is-invalid');
-        if (err) err.textContent = msg;
-      }
-
-      function clearError(field) {
-        const err = field.parentElement.querySelector('.form-error');
-        field.classList.remove('is-invalid');
-        if (err) err.textContent = '';
-      }
-
-      function validateForm() {
-        let valid = true;
-
-        const nombre    = document.getElementById('nombre');
-        const categoria = document.getElementById('categoria');
-        const whatsapp  = document.getElementById('whatsapp');
-        const ciudad    = document.getElementById('ciudad');
-
-        [nombre, categoria, whatsapp, ciudad].forEach(clearError);
-
-        if (!nombre.value.trim()) {
-          showError(nombre, 'Por favor ingresa el nombre de tu negocio.');
-          valid = false;
-        }
-
-        if (!categoria.value) {
-          showError(categoria, 'Por favor selecciona una categoría.');
-          valid = false;
-        }
-
-        const phoneRaw = whatsapp.value.trim().replace(/[\s\-\(\)]/g, '');
-        if (!phoneRaw || phoneRaw.length < 8) {
-          showError(whatsapp, 'Por favor ingresa un número de WhatsApp válido.');
-          valid = false;
-        }
-
-        if (!ciudad.value.trim()) {
-          showError(ciudad, 'Por favor ingresa tu ciudad o municipio.');
-          valid = false;
-        }
-
-        return valid;
-      }
-
-      // Real-time error clearing
-      form.querySelectorAll('input, select, textarea').forEach(function (field) {
-        field.addEventListener('input', function () { clearError(field); });
-        field.addEventListener('change', function () { clearError(field); });
-      });
-
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        if (!validateForm()) return;
-
-        // Collect data
-        const data = {
-          nombre:     document.getElementById('nombre').value.trim(),
-          categoria:  document.getElementById('categoria').value,
-          whatsapp:   document.getElementById('whatsapp').value.trim(),
-          ciudad:     document.getElementById('ciudad').value.trim(),
-          descripcion: document.getElementById('descripcion').value.trim(),
-        };
-
-        // Build WhatsApp pre-filled message as fallback / submission channel
-        const msg = encodeURIComponent(
-          '¡Hola MandarCasa! Quiero registrar mi negocio:\n\n' +
-          '🏪 Negocio: ' + data.nombre + '\n' +
-          '📦 Categoría: ' + data.categoria + '\n' +
-          '📍 Ciudad: ' + data.ciudad + '\n' +
-          (data.descripcion ? '📝 Descripción: ' + data.descripcion : '')
-        );
-
-        // Show success UI
-        const submitBtn = form.querySelector('.submit-btn');
-        submitBtn.disabled  = true;
-        submitBtn.textContent = '¡Enviando...';
-
-        // Simulate async (replace with real fetch() when backend is ready)
-        setTimeout(function () {
-          form.style.display       = 'none';
-          successBox.hidden        = false;
-          successBox.style.display = 'block';
-
-          // Update WhatsApp link in success box with pre-filled message
-          const waLink = successBox.querySelector('a[href*="wa.me"]');
-          if (waLink) {
-            waLink.href = 'https://wa.me/18323624499?text=' + msg;
-          }
-
-          successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 800);
-      });
-    }());
-
-    // ── FAQ accordion icon toggle ────────────────────
-    document.querySelectorAll('.faq-item').forEach(function (item) {
-      item.addEventListener('toggle', function () {
-        const icon = item.querySelector('.faq-item__icon');
-        if (icon) icon.textContent = item.open ? '−' : '+';
-      });
-    });
+    tailwind.config = {theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}
   </script>
+</head>
+<body class="bg-[#07101f] text-white font-sans">
 
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 bg-[#07101f]/95 backdrop-blur-xl border-b border-[#1e3050]">
+    <div class="max-w-screen-xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-black text-2xl tracking-tighter">Mandar<span class="text-[#3b82f6]">Casa</span></a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="index.html" class="hover:text-[#3b82f6]">Inicio</a>
+        <a href="como-funciona.html" class="hover:text-[#3b82f6]">Cómo Funciona</a>
+        <a href="proveedores.html" class="text-[#3b82f6]">Para Proveedores</a>
+        <a href="contacto.html" class="hover:text-[#3b82f6]">Contacto</a>
+      </div>
+      <a href="#registro" class="rounded-2xl bg-[#2563eb] px-6 py-2.5 text-sm font-semibold">Registrar gratis →</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="max-w-screen-xl mx-auto px-6 pt-20 pb-16 text-center">
+    <div class="inline-block mb-5 text-xs font-semibold px-4 py-1.5 bg-[#0d1a2e] border border-[#1e3050] text-[#3b82f6] rounded-3xl">🇸🇻 PARA NEGOCIOS EN EL SALVADOR</div>
+    
+    <h1 class="text-6xl font-black tracking-tighter mb-4">Recibe pedidos de<br>clientes en Estados Unidos</h1>
+    <p class="max-w-lg mx-auto text-xl text-white/75">Conecta tu negocio de San Miguel o El Salvador con miles de familias salvadoreñas en Houston que quieren mandar a los suyos.</p>
+
+    <div class="pt-7 flex justify-center gap-4">
+      <a href="#registro" class="bg-[#2563eb] text-lg px-8 py-4 rounded-2xl font-semibold">Registrar mi negocio gratis →</a>
+      <a href="https://wa.me/18323624499" class="text-lg px-8 py-4 border border-[#334b6e] rounded-2xl font-medium">💬 Hablar por WhatsApp</a>
+    </div>
+    <p class="mt-4 text-xs text-white/60">Sin contratos • Sin costo inicial • Solo pagas cuando vendes</p>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="bg-[#0d1a2e] py-16">
+    <div class="max-w-screen-xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+      <div class="bg-[#07101f] p-8 rounded-3xl border border-[#1e3050]">
+        <div class="text-5xl mb-5">📈</div>
+        <div class="font-semibold text-2xl mb-2">Más clientes nuevos</div>
+        <p class="leading-snug text-white/75">Miles de salvadoreños en Houston quieren mandar productos por esta misma vía.</p>
+      </div>
+      <div class="bg-[#07101f] p-8 rounded-3xl border border-[#1e3050]">
+        <div class="text-5xl mb-5">💰</div>
+        <div class="font-semibold text-2xl mb-2">Cobras al instante</div>
+        <p class="leading-snug text-white/75">Recibes el pago en tu cuenta local el mismo día que entregas. Sin complicaciones.</p>
+      </div>
+      <div class="bg-[#07101f] p-8 rounded-3xl border border-[#1e3050]">
+        <div class="text-5xl mb-5">🔁</div>
+        <div class="font-semibold text-2xl mb-2">Pedidos recurrentes</div>
+        <p class="leading-snug text-white/75">Los clientes regresan constantemente con pedidos para sus familiares.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION FORM -->
+  <section id="registro" class="max-w-screen-xl mx-auto px-6 py-20">
+    <div class="max-w-lg mx-auto">
+      <div class="text-center mb-9">
+        <div class="font-extrabold tracking-[3px] text-xs text-[#3b82f6]">REGÍSTRATE EN 2 MINUTOS</div>
+        <h2 class="text-4xl font-black tracking-tight mt-3">Empieza a vender hoy</h2>
+      </div>
+
+      <form id="vendorForm" class="space-y-5 bg-[#0d1a2e] border border-[#1e3050] p-8 rounded-3xl">
+        <div class="grid grid-cols-1 gap-5">
+          <div>
+            <label class="block text-sm mb-2 font-medium text-white/80">Nombre del negocio</label>
+            <input id="nombre" required type="text" placeholder="Pulpería La Esperanza" class="bg-[#07101f] border border-[#334b6e] rounded-2xl block w-full py-3 px-4 focus:border-[#3b82f6]">
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm mb-2 font-medium text-white/80">Categoría</label>
+              <select id="categoria" required class="bg-[#07101f] border border-[#334b6e] rounded-2xl w-full py-3 px-4 focus:border-[#3b82f6]">
+                <option value="">Selecciona...</option>
+                <option>Abarrotes / Pulpería</option>
+                <option>Farmacia</option>
+                <option>Servicios (Plomería, Electricidad)</option>
+                <option>Tienda de flores / regalos</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm mb-2 font-medium text-white/80">Ciudad</label>
+              <select id="ciudad" required class="bg-[#07101f] border border-[#334b6e] w-full py-3 px-4 rounded-2xl focus:border-[#3b82f6]">
+                <option>San Miguel</option>
+                <option>San Salvador</option>
+                <option>Santa Ana</option>
+                <option>Usulután</option>
+                <option>Otra</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm mb-2 font-medium text-white/80">WhatsApp del negocio</label>
+            <input id="whatsapp" required type="tel" placeholder="+503 7555-1234" class="bg-[#07101f] border border-[#334b6e] rounded-2xl w-full py-3 px-4">
+          </div>
+          <div>
+            <label class="block text-sm mb-2 font-medium text-white/80">¿Qué ofreces?</label>
+            <textarea id="descripcion" rows="3" placeholder="Descríbenos brevemente qué vende o ofrece tu negocio" class="bg-[#07101f] border border-[#334b6e] rounded-2xl w-full py-3 px-4 resize-y min-h-[86px]"></textarea>
+          </div>
+        </div>
+        
+        <button type="submit" class="mt-3 w-full py-4 bg-[#2563eb] hover:bg-[#3b82f6] font-bold text-lg rounded-2xl transition">Enviar solicitud →</button>
+      </form>
+
+      <div id="vendorSuccess" hidden class="mt-6 bg-[#052e1f] border border-[#166534] text-[#4ade80] text-center py-7 rounded-3xl">
+        <div class="text-5xl">✅</div>
+        <div class="pt-3 font-semibold text-xl">¡Gracias! Revisaremos tu solicitud pronto.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="text-center py-10 text-white/40 text-xs">© MandarCasa 2025 — Sin costo para registrarte</div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
