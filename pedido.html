@@ -64,6 +64,12 @@
           <div class="text-[#22c55e] text-xs font-semibold mt-1">Desde $30 – $60 USD</div>
         </div>
       </div>
+
+      <!-- Nota de precios -->
+      <div class="mt-3 text-center">
+        <p class="text-xs text-white/60 lang-es">Los precios varían según cantidad. Te enviamos el precio exacto por WhatsApp en menos de 10 minutos.</p>
+        <p class="text-xs text-white/60 lang-en hidden">Prices vary by quantity. We’ll send you the exact price via WhatsApp within 10 minutes.</p>
+      </div>
     </div>
 
     <!-- DETALLES -->
@@ -72,18 +78,22 @@
         <div>
           <label class="text-sm text-white/70 block mb-1.5 lang-es">Describe exactamente qué quieres enviar</label>
           <label class="text-sm text-white/70 block mb-1.5 lang-en hidden">Describe exactly what you want to send</label>
-          <textarea id="descripcion" rows="3" class="w-full bg-[#07101f] border border-[#334b6e] rounded-2xl px-5 py-3.5"></textarea>
+          <textarea id="descripcion" rows="3" class="w-full bg-[#07101f] border border-[#334b6e] rounded-2xl px-5 py-3.5" 
+            placeholder="Ej: 5 lb arroz, 2 lb frijoles, 1 litro aceite, 1 kg azúcar"></textarea>
         </div>
+        
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
             <label class="text-sm text-white/70 block mb-1.5 lang-es">Ciudad de entrega</label>
             <label class="text-sm text-white/70 block mb-1.5 lang-en hidden">Delivery city in El Salvador</label>
-            <input id="ciudad" type="text" class="w-full bg-[#07101f] border border-[#334b6e] rounded-2xl px-5 py-3.5">
+            <input id="ciudad" type="text" class="w-full bg-[#07101f] border border-[#334b6e] rounded-2xl px-5 py-3.5" 
+              placeholder="San Miguel, Santa Ana, San Salvador...">
           </div>
           <div>
             <label class="text-sm text-white/70 block mb-1.5 lang-es">Nombre de quien recibe</label>
             <label class="text-sm text-white/70 block mb-1.5 lang-en hidden">Recipient name</label>
-            <input id="destinatario" type="text" class="w-full bg-[#07101f] border border-[#334b6e] rounded-2xl px-5 py-3.5">
+            <input id="destinatario" type="text" class="w-full bg-[#07101f] border border-[#334b6e] rounded-2xl px-5 py-3.5" 
+              placeholder="María López">
           </div>
         </div>
       </div>
