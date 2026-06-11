@@ -42,20 +42,15 @@
       </div>
       
       <div class="flex items-center gap-3">
-        <!-- Language Toggle -->
         <div class="flex items-center bg-[#0d1a2e] border border-[#1e3050] rounded-full p-1 text-xs">
-          <button onclick="switchLanguage('es')" id="lang-es-btn"
-                  class="px-3 py-1 rounded-full bg-[#2563eb] text-white font-medium">ES</button>
-          <button onclick="switchLanguage('en')" id="lang-en-btn"
-                  class="px-3 py-1 rounded-full text-white/70 hover:text-white">EN</button>
+          <button onclick="switchLanguage('es')" id="lang-es-btn" class="px-3 py-1 rounded-full bg-[#2563eb] text-white font-medium">ES</button>
+          <button onclick="switchLanguage('en')" id="lang-en-btn" class="px-3 py-1 rounded-full text-white/70 hover:text-white">EN</button>
         </div>
         
-        <a href="pedido.html" 
-           class="px-6 py-2.5 rounded-xl bg-[#2563eb] hover:bg-[#3b82f6] font-semibold text-sm transition-all lang-es">
+        <a href="pedido.html" class="px-6 py-2.5 rounded-xl bg-[#2563eb] hover:bg-[#3b82f6] font-semibold text-sm transition-all lang-es">
           Hacer pedido →
         </a>
-        <a href="pedido.html" 
-           class="px-6 py-2.5 rounded-xl bg-[#2563eb] hover:bg-[#3b82f6] font-semibold text-sm transition-all lang-en hidden">
+        <a href="pedido.html" class="px-6 py-2.5 rounded-xl bg-[#2563eb] hover:bg-[#3b82f6] font-semibold text-sm transition-all lang-en hidden">
           Place Order →
         </a>
         
@@ -89,19 +84,11 @@
     </p>
     
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="pedido.html" class="inline-block px-9 py-4 rounded-2xl bg-[#2563eb] text-lg font-semibold hover:bg-[#3b82f6] lang-es">
-        Hacer pedido ahora
-      </a>
-      <a href="pedido.html" class="inline-block px-9 py-4 rounded-2xl bg-[#2563eb] text-lg font-semibold hover:bg-[#3b82f6] lang-en hidden">
-        Place Order Now
-      </a>
+      <a href="pedido.html" class="inline-block px-9 py-4 rounded-2xl bg-[#2563eb] text-lg font-semibold hover:bg-[#3b82f6] lang-es">Hacer pedido ahora</a>
+      <a href="pedido.html" class="inline-block px-9 py-4 rounded-2xl bg-[#2563eb] text-lg font-semibold hover:bg-[#3b82f6] lang-en hidden">Place Order Now</a>
       
-      <a href="como-funciona.html" class="inline-flex items-center px-9 py-4 rounded-2xl border border-[#334b6e] hover:bg-white/5 text-lg font-medium lang-es">
-        Ver cómo funciona
-      </a>
-      <a href="como-funciona.html" class="inline-flex items-center px-9 py-4 rounded-2xl border border-[#334b6e] hover:bg-white/5 text-lg font-medium lang-en hidden">
-        See How It Works
-      </a>
+      <a href="como-funciona.html" class="inline-flex items-center px-9 py-4 rounded-2xl border border-[#334b6e] hover:bg-white/5 text-lg font-medium lang-es">Ver cómo funciona</a>
+      <a href="como-funciona.html" class="inline-flex items-center px-9 py-4 rounded-2xl border border-[#334b6e] hover:bg-white/5 text-lg font-medium lang-en hidden">See How It Works</a>
     </div>
   </section>
 
@@ -143,23 +130,26 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="bg-[#0d1a2e] border border-[#1e3050] p-8 rounded-3xl">
         <div class="text-5xl mb-4">🛒</div>
-        <div class="font-bold text-2xl mb-2 lang-es">Despensa y comida</div>
-        <div class="font-bold text-2xl mb-2 lang-en hidden">Groceries & Food</div>
+        <div class="font-bold text-2xl mb-1 lang-es">Despensa y comida</div>
+        <div class="font-bold text-2xl mb-1 lang-en hidden">Groceries & Food</div>
+        <div class="text-[#22c55e] text-sm font-semibold mb-3">Desde $35 – $65 USD</div>
         <p class="text-white/70 lang-es">Arroz, frijoles, aceite, azúcar, carnes, lácteos y todo lo que necesiten.</p>
         <p class="text-white/70 lang-en hidden">Rice, beans, oil, sugar, meat, dairy — everything they need.</p>
       </div>
       <div class="bg-[#0d1a2e] border border-[#1e3050] p-8 rounded-3xl">
         <div class="text-5xl mb-4">💊</div>
-        <div class="font-bold text-2xl mb-2 lang-es">Medicinas y farmacia</div>
-        <div class="font-bold text-2xl mb-2 lang-en hidden">Medicine & Pharmacy</div>
+        <div class="font-bold text-2xl mb-1 lang-es">Medicinas y farmacia</div>
+        <div class="font-bold text-2xl mb-1 lang-en hidden">Medicine & Pharmacy</div>
+        <div class="text-[#22c55e] text-sm font-semibold mb-3">Desde $25 – $80 USD</div>
         <p class="text-white/70 lang-es">Medicamentos recetados y de venta libre con entrega directa.</p>
         <p class="text-white/70 lang-en hidden">Prescription and over-the-counter medicine delivered to their door.</p>
       </div>
       <div class="bg-[#0d1a2e] border border-[#1e3050] p-8 rounded-3xl">
         <div class="text-5xl mb-4">🎂</div>
-        <div class="font-bold text-2xl mb-2 lang-es">Regalos y cumpleaños</div>
-        <div class="font-bold text-2xl mb-2 lang-en hidden">Gifts & Cake</div>
-        <p class="text-white/70 lang-es">Pasteles, flores, peluches, joyería y todo lo que quieras sorprenderlos.</p>
+        <div class="font-bold text-2xl mb-1 lang-es">Regalos y cumpleaños</div>
+        <div class="font-bold text-2xl mb-1 lang-en hidden">Gifts & Cake</div>
+        <div class="text-[#22c55e] text-sm font-semibold mb-3">Desde $30 – $55 USD</div>
+        <p class="text-white/70 lang-es">Pasteles, flores, peluches, joyería y todo lo que quieras surprenderlos.</p>
         <p class="text-white/70 lang-en hidden">Birthday cakes, flowers, toys, jewelry — surprise them.</p>
       </div>
     </div>
@@ -205,12 +195,8 @@
       </div>
       
       <div class="mt-8 text-center">
-        <a href="pedido.html" class="inline-flex items-center gap-3 bg-white text-[#07101f] px-8 py-4 rounded-2xl font-bold text-lg lang-es">
-          Empezar pedido por WhatsApp
-        </a>
-        <a href="pedido.html" class="inline-flex items-center gap-3 bg-white text-[#07101f] px-8 py-4 rounded-2xl font-bold text-lg lang-en hidden">
-          Start Order via WhatsApp
-        </a>
+        <a href="pedido.html" class="inline-flex items-center gap-3 bg-white text-[#07101f] px-8 py-4 rounded-2xl font-bold text-lg lang-es">Empezar pedido por WhatsApp</a>
+        <a href="pedido.html" class="inline-flex items-center gap-3 bg-white text-[#07101f] px-8 py-4 rounded-2xl font-bold text-lg lang-en hidden">Start Order via WhatsApp</a>
       </div>
     </div>
   </section>
@@ -219,45 +205,40 @@
     function switchLanguage(lang) {
       const esBtn = document.getElementById('lang-es-btn');
       const enBtn = document.getElementById('lang-en-btn');
-      
-      const esElements = document.querySelectorAll('.lang-es');
-      const enElements = document.querySelectorAll('.lang-en');
-      
+      const esEls = document.querySelectorAll('.lang-es');
+      const enEls = document.querySelectorAll('.lang-en');
+
       if (lang === 'es') {
-        esBtn.classList.add('bg-[#2563eb]', 'text-white');
-        esBtn.classList.remove('text-white/70');
-        enBtn.classList.remove('bg-[#2563eb]', 'text-white');
-        enBtn.classList.add('text-white/70');
-        
-        esElements.forEach(el => el.classList.remove('hidden'));
-        enElements.forEach(el => el.classList.add('hidden'));
-        
+        esBtn.classList.add('bg-[#2563eb]', 'text-white'); esBtn.classList.remove('text-white/70');
+        enBtn.classList.remove('bg-[#2563eb]', 'text-white'); enBtn.classList.add('text-white/70');
+        esEls.forEach(el => el.classList.remove('hidden'));
+        enEls.forEach(el => el.classList.add('hidden'));
         document.documentElement.lang = 'es';
         localStorage.setItem('mandarcasa_lang', 'es');
       } else {
-        enBtn.classList.add('bg-[#2563eb]', 'text-white');
-        enBtn.classList.remove('text-white/70');
-        esBtn.classList.remove('bg-[#2563eb]', 'text-white');
-        esBtn.classList.add('text-white/70');
-        
-        esElements.forEach(el => el.classList.add('hidden'));
-        enElements.forEach(el => el.classList.remove('hidden'));
-        
+        enBtn.classList.add('bg-[#2563eb]', 'text-white'); enBtn.classList.remove('text-white/70');
+        esBtn.classList.remove('bg-[#2563eb]', 'text-white'); esBtn.classList.add('text-white/70');
+        esEls.forEach(el => el.classList.add('hidden'));
+        enEls.forEach(el => el.classList.remove('hidden'));
         document.documentElement.lang = 'en';
         localStorage.setItem('mandarcasa_lang', 'en');
       }
     }
-    
-    // Initialize language on load
+
     document.addEventListener('DOMContentLoaded', () => {
-      const savedLang = localStorage.getItem('mandarcasa_lang') || 'es';
-      switchLanguage(savedLang);
-      
-      // Mobile menu
-      const mobileBtn = document.getElementById('mobile-menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      if (mobileBtn && mobileMenu) {
-        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      const saved = localStorage.getItem('mandarcasa_lang') || 'es';
+      const esBtn = document.getElementById('lang-es-btn');
+      const enBtn = document.getElementById('lang-en-btn');
+      const esEls = document.querySelectorAll('.lang-es');
+      const enEls = document.querySelectorAll('.lang-en');
+
+      if (saved === 'en') {
+        enBtn.classList.add('bg-[#2563eb]', 'text-white');
+        esEls.forEach(el => el.classList.add('hidden'));
+        enEls.forEach(el => el.classList.remove('hidden'));
+        document.documentElement.lang = 'en';
+      } else {
+        esBtn.classList.add('bg-[#2563eb]', 'text-white');
       }
     });
   </script>
