@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Para Proveedores — MandarCasa</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
@@ -28,7 +29,6 @@
     </div>
   </nav>
 
-  <!-- HERO -->
   <section class="max-w-screen-xl mx-auto px-6 pt-16 pb-14 text-center">
     <div class="inline-block mb-5 text-xs font-semibold px-5 py-1.5 bg-[#22c55e]/10 text-[#22c55e] rounded-3xl lang-es">🇸🇻 PARA NEGOCIOS EN EL SALVADOR</div>
     <div class="inline-block mb-5 text-xs font-semibold px-5 py-1.5 bg-[#22c55e]/10 text-[#22c55e] rounded-3xl lang-en hidden">🇸🇻 FOR BUSINESSES IN EL SALVADOR</div>
@@ -46,41 +46,97 @@
     <p class="mt-4 text-sm text-white/50 lang-en hidden">Free • No contracts • You only earn when you sell</p>
   </section>
 
-  <!-- BODY CONTENT (kept short for focus) -->
-  <section class="max-w-screen-xl mx-auto px-6 py-16 text-center">
+  <section id="registro" class="max-w-screen-xl mx-auto px-6 py-16">
     <div class="max-w-lg mx-auto">
-      <h2 class="text-4xl font-black mb-6 lang-es">Registra tu negocio gratis</h2>
-      <a href="#registro" class="inline-block bg-[#2563eb] px-8 py-4 rounded-2xl font-bold">Comenzar</a>
+      <div class="text-center mb-8">
+        <div class="uppercase tracking-[3px] text-[#3b82f6] text-xs font-bold lang-es">ÚNETE HOY</div>
+        <div class="uppercase tracking-[3px] text-[#3b82f6] text-xs font-bold lang-en hidden">JOIN TODAY</div>
+        <h2 class="text-5xl font-black tracking-[-1.5px] mt-2 lang-es">Registra tu negocio gratis</h2>
+        <h2 class="text-5xl font-black tracking-[-1.5px] mt-2 lang-en hidden">Register your business for free</h2>
+      </div>
+      
+      <form class="bg-[#0d1a2e] border border-[#1e3050] p-8 rounded-3xl space-y-5" id="vendorForm">
+        <div>
+          <label class="text-sm text-white/70 mb-1.5 block lang-es">Nombre del negocio</label>
+          <label class="text-sm text-white/70 mb-1.5 block lang-en hidden">Business / Store Name</label>
+          <input type="text" id="nombre" class="w-full bg-[#07101f] border border-[#334b6e] px-4 py-3.5 rounded-2xl" placeholder="Pulpería La Esperanza">
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <label class="text-sm text-white/70 mb-1.5 block lang-es">Ciudad / Municipio</label>
+            <label class="text-sm text-white/70 mb-1.5 block lang-en hidden">City / Town</label>
+            <input type="text" id="ciudad" class="w-full bg-[#07101f] border border-[#334b6e] px-4 py-3.5 rounded-2xl" placeholder="San Miguel">
+          </div>
+          <div>
+            <label class="text-sm text-white/70 mb-1.5 block lang-es">Categoría</label>
+            <label class="text-sm text-white/70 mb-1.5 block lang-en hidden">Category</label>
+            <select id="categoria" class="w-full bg-[#07101f] border border-[#334b6e] px-4 py-3.5 rounded-2xl text-white">
+              <option>Pulpería / Abarrotes</option>
+              <option>Farmacia / Droguería</option>
+              <option>Panadería</option>
+              <option>Restaurante</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="text-sm text-white/70 mb-1.5 block lang-es">WhatsApp</label>
+          <label class="text-sm text-white/70 mb-1.5 block lang-en hidden">WhatsApp Number</label>
+          <input type="tel" id="whatsapp" class="w-full bg-[#07101f] border border-[#334b6e] px-4 py-3.5 rounded-2xl" placeholder="+503 7123 4567">
+        </div>
+        <div>
+          <label class="text-sm text-white/70 mb-1.5 block lang-es">¿Cómo prefieres recibir pago?</label>
+          <label class="text-sm text-white/70 mb-1.5 block lang-en hidden">Preferred payment method</label>
+          <select id="pago" class="w-full bg-[#07101f] border border-[#334b6e] px-4 py-3.5 rounded-2xl text-white">
+            <option>USDT en Solana (Recomendado)</option>
+            <option>Zelle</option>
+            <option>Cash App</option>
+            <option>Venmo</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full bg-[#2563eb] py-4 rounded-2xl font-bold text-lg mt-3 lang-es">Enviar solicitud</button>
+        <button type="submit" class="w-full bg-[#2563eb] py-4 rounded-2xl font-bold text-lg mt-3 lang-en hidden">Submit Application</button>
+        <p class="text-center text-xs text-white/40 lang-es">Sin costo. Sin compromiso. Solo ganas cuando vendes.</p>
+        <p class="text-center text-xs text-white/40 lang-en hidden">Free. No commitment. You only earn when you sell.</p>
+      </form>
     </div>
   </section>
 
   <script>
     function switchLanguage(lang) {
-      const esBtn = document.getElementById('lang-es-btn');
-      const enBtn = document.getElementById('lang-en-btn');
-      const esEls = document.querySelectorAll('.lang-es');
-      const enEls = document.querySelectorAll('.lang-en');
+      const esBtn = document.getElementById('lang-es-btn'); const enBtn = document.getElementById('lang-en-btn');
+      const esEls = document.querySelectorAll('.lang-es'); const enEls = document.querySelectorAll('.lang-en');
       if (lang === 'es') {
-        esBtn.classList.add('bg-[#2563eb]', 'text-white'); esBtn.classList.remove('text-white/70');
-        enBtn.classList.remove('bg-[#2563eb]', 'text-white'); enBtn.classList.add('text-white/70');
+        esBtn.classList.add('bg-[#2563eb]','text-white'); esBtn.classList.remove('text-white/70');
+        enBtn.classList.remove('bg-[#2563eb]','text-white'); enBtn.classList.add('text-white/70');
         esEls.forEach(el => el.classList.remove('hidden')); enEls.forEach(el => el.classList.add('hidden'));
-        document.documentElement.lang = 'es'; localStorage.setItem('mandarcasa_lang', 'es');
+        document.documentElement.lang = 'es'; localStorage.setItem('mandarcasa_lang','es');
       } else {
-        enBtn.classList.add('bg-[#2563eb]', 'text-white'); enBtn.classList.remove('text-white/70');
-        esBtn.classList.remove('bg-[#2563eb]', 'text-white'); esBtn.classList.add('text-white/70');
+        enBtn.classList.add('bg-[#2563eb]','text-white'); enBtn.classList.remove('text-white/70');
+        esBtn.classList.remove('bg-[#2563eb]','text-white'); esBtn.classList.add('text-white/70');
         esEls.forEach(el => el.classList.add('hidden')); enEls.forEach(el => el.classList.remove('hidden'));
-        document.documentElement.lang = 'en'; localStorage.setItem('mandarcasa_lang', 'en');
+        document.documentElement.lang = 'en'; localStorage.setItem('mandarcasa_lang','en');
       }
     }
+    document.getElementById('vendorForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      const ciudad = document.getElementById('ciudad').value;
+      const whatsapp = document.getElementById('whatsapp').value;
+      const categoria = document.getElementById('categoria').value;
+      const pago = document.getElementById('pago').value;
+      const msg = `Hola MandarCasa! Quiero ser proveedor.%0A%0ANegocio: ${nombre}%0ACiudad: ${ciudad}%0AWhatsApp: ${whatsapp}%0ACategoría: ${categoria}%0APago preferido: ${pago}`;
+      window.location.href = `https://wa.me/18323624499?text=${msg}`;
+    });
     document.addEventListener('DOMContentLoaded', () => {
       const saved = localStorage.getItem('mandarcasa_lang') || 'es';
       if (saved === 'en') {
-        document.getElementById('lang-en-btn').classList.add('bg-[#2563eb]', 'text-white');
+        document.getElementById('lang-en-btn').classList.add('bg-[#2563eb]','text-white');
         document.querySelectorAll('.lang-es').forEach(el => el.classList.add('hidden'));
         document.querySelectorAll('.lang-en').forEach(el => el.classList.remove('hidden'));
         document.documentElement.lang = 'en';
       } else {
-        document.getElementById('lang-es-btn').classList.add('bg-[#2563eb]', 'text-white');
+        document.getElementById('lang-es-btn').classList.add('bg-[#2563eb]','text-white');
       }
     });
   </script>
