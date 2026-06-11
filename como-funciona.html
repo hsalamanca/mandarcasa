@@ -4,40 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cómo Funciona — MandarCasa</title>
+  <meta name="description" content="3 pasos simples para enviar comida, medicinas y regalos a tu familia en El Salvador desde cualquier ciudad de EE.UU.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>
+    tailwind.config = {theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}
+  </script>
 </head>
 <body class="bg-[#07101f] text-white font-sans">
-  <nav class="sticky top-0 z-50 border-b border-[#1e3050] bg-[#07101f]/95 backdrop-blur px-6 py-4">
-    <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 bg-[#07101f]/95 backdrop-blur-xl border-b border-[#1e3050]">
+    <div class="max-w-screen-xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="index.html" class="font-black text-2xl tracking-tighter">Mandar<span class="text-[#3b82f6]">Casa</span></a>
-      <a href="index.html" class="text-sm text-[#3b82f6]">← Volver al inicio</a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="index.html" class="hover:text-[#3b82f6]">Inicio</a>
+        <a href="como-funciona.html" class="text-[#3b82f6]">Cómo Funciona</a>
+        <a href="proveedores.html" class="hover:text-[#3b82f6]">Para Proveedores</a>
+        <a href="contacto.html" class="hover:text-[#3b82f6]">Contacto</a>
+      </div>
+      <a href="https://wa.me/18323624499" class="text-sm px-4 py-2 rounded-xl border border-white/20 hover:bg-white/5">💬 WhatsApp</a>
     </div>
   </nav>
 
-  <div class="max-w-screen-xl px-6 mx-auto pt-16 pb-24">
-    <div class="text-center mb-12">
-      <div class="font-extrabold text-xs text-[#3b82f6]">EL PROCESO EN DETALLE</div>
-      <h1 class="text-6xl tracking-tighter font-black pt-2">Cómo funciona MandarCasa</h1>
+  <div class="max-w-screen-xl px-6 mx-auto pt-16 pb-20">
+    <div class="text-center mb-16">
+      <div class="text-[#3b82f6] text-xs font-extrabold tracking-[3px]">PROCESO SIMPLE</div>
+      <h1 class="text-6xl font-black tracking-tighter pt-3">Cómo funciona en 3 pasos</h1>
+      <p class="max-w-md mx-auto text-xl text-white/70 mt-4">Desde cualquier ciudad de Estados Unidos hasta cualquier ciudad de El Salvador.</p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-6 pt-4">
-      <div class="rounded-3xl border p-8 border-[#1e3050]">
-        <div class="text-[#2563eb] text-xs font-bold mb-3">PASO 01</div>
-        <h3 class="text-3xl tracking-tight font-bold">Elige qué quieres enviar</h3>
-        <p class="mt-4 text-white/70">Explora categorías como comida, medicinas, servicios y regalos. Elige de nuestros proveedores verificados en San Miguel y otras ciudades.</p>
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <!-- Paso 1 -->
+      <div class="bg-[#0d1a2e] border border-[#1e3050] rounded-3xl p-9">
+        <div class="text-[#3b82f6] text-sm font-mono font-bold mb-4">PASO 01</div>
+        <div class="font-black text-4xl tracking-tighter mb-6">Elige qué quieres enviar</div>
+        <p class="text-lg text-white/80">Despensa, medicinas, pasteles, flores, regalos o cualquier producto de nuestros vendedores verificados en San Salvador, San Miguel, Santa Ana y más.</p>
+        <div class="mt-8 pt-8 border-t border-white/10 text-sm text-white/60">+50 categorías disponibles</div>
       </div>
-      <div class="rounded-3xl border p-8 border-[#1e3050]">
-        <div class="text-[#2563eb] text-xs font-bold mb-3">PASO 02</div>
-        <h3 class="text-3xl tracking-tight font-bold">Paga con tarjeta o Zelle</h3>
-        <p class="text-white/70 mt-4">Realiza el pago en dólares directamente desde tu celular. Recibes confirmación al instante y nosotros iniciamos el pedido.</p>
+
+      <!-- Paso 2 -->
+      <div class="bg-[#0d1a2e] border border-[#1e3050] rounded-3xl p-9">
+        <div class="text-[#3b82f6] text-sm font-mono font-bold mb-4">PASO 02</div>
+        <div class="font-black text-4xl tracking-tighter mb-6">Paga con Crypto, Zelle o lo que prefieras</div>
+        <p class="text-lg text-white/80">Elige tu método: <strong>USDT (Solana)</strong>, Zelle, Cash App, Venmo o PayPal. Pagas en dólares. Sin complicaciones.</p>
+        
+        <div class="mt-8 space-y-2 text-sm">
+          <div class="flex gap-3 items-center"><span class="text-[#22c55e]">●</span> Crypto (más rápido y barato)</div>
+          <div class="flex gap-3 items-center"><span class="text-white/50">●</span> Zelle / Cash App / Venmo</div>
+          <div class="flex gap-3 items-center"><span class="text-white/50">●</span> PayPal</div>
+        </div>
       </div>
-      <div class="rounded-3xl border p-8 border-[#1e3050]">
-        <div class="text-[#2563eb] text-xs font-bold mb-3">PASO 03</div>
-        <h3 class="text-3xl tracking-tight font-bold">Tu familia recibe y tú recibes confirmación</h3>
-        <p class="text-white/70 mt-4">Recibirás actualizaciones vía WhatsApp cuando el pedido llegue. Tu familia firma y tú obtienes prueba.</p>
+
+      <!-- Paso 3 -->
+      <div class="bg-[#0d1a2e] border border-[#1e3050] rounded-3xl p-9">
+        <div class="text-[#3b82f6] text-sm font-mono font-bold mb-4">PASO 03</div>
+        <div class="font-black text-4xl tracking-tighter mb-6">Tu familia recibe y tú recibes prueba</div>
+        <p class="text-lg text-white/80">El vendedor entrega en menos de 24h. Te enviamos foto + confirmación por WhatsApp. Todo queda registrado.</p>
+        
+        <div class="mt-8 pt-8 border-t border-white/10 text-sm text-white/70">Sin intermediarios. Transparente.</div>
       </div>
+    </div>
+
+    <div class="text-center mt-16">
+      <a href="https://wa.me/18323624499?text=Hola%20MandarCasa,%20quiero%20hacer%20un%20pedido" 
+         class="inline-block bg-[#2563eb] hover:bg-[#3b82f6] px-10 py-4 rounded-2xl font-bold text-xl active:scale-[0.985]">
+        Empezar mi primer pedido →
+      </a>
     </div>
   </div>
 </body>
