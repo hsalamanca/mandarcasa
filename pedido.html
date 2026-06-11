@@ -43,21 +43,25 @@
           <div class="text-4xl mb-3">🛒</div>
           <div class="font-bold text-xl lang-es">Despensa y comida</div>
           <div class="font-bold text-xl lang-en hidden">Groceries & Food</div>
+          <div class="text-[#22c55e] text-xs font-semibold mt-1">Desde $35 – $65 USD</div>
         </div>
         <div onclick="selectCategory(this, 'Medicinas y farmacia', 'Medicine & Pharmacy')" class="category-card border border-[#1e3050] hover:border-[#3b82f6] rounded-3xl p-6 cursor-pointer bg-[#0d1a2e]">
           <div class="text-4xl mb-3">💊</div>
           <div class="font-bold text-xl lang-es">Medicinas y farmacia</div>
           <div class="font-bold text-xl lang-en hidden">Medicine & Pharmacy</div>
+          <div class="text-[#22c55e] text-xs font-semibold mt-1">Desde $25 – $80 USD</div>
         </div>
         <div onclick="selectCategory(this, 'Pasteles y regalos', 'Cake & Gifts')" class="category-card border border-[#1e3050] hover:border-[#3b82f6] rounded-3xl p-6 cursor-pointer bg-[#0d1a2e]">
           <div class="text-4xl mb-3">🎂</div>
           <div class="font-bold text-xl lang-es">Pasteles y regalos</div>
           <div class="font-bold text-xl lang-en hidden">Cake & Gifts</div>
+          <div class="text-[#22c55e] text-xs font-semibold mt-1">Desde $30 – $55 USD</div>
         </div>
         <div onclick="selectCategory(this, 'Flores y arreglos', 'Flowers')" class="category-card border border-[#1e3050] hover:border-[#3b82f6] rounded-3xl p-6 cursor-pointer bg-[#0d1a2e]">
           <div class="text-4xl mb-3">💐</div>
           <div class="font-bold text-xl lang-es">Flores y arreglos</div>
           <div class="font-bold text-xl lang-en hidden">Flowers</div>
+          <div class="text-[#22c55e] text-xs font-semibold mt-1">Desde $30 – $60 USD</div>
         </div>
       </div>
     </div>
@@ -152,19 +156,15 @@
       const enEls = document.querySelectorAll('.lang-en');
 
       if (lang === 'es') {
-        esBtn.classList.add('bg-[#2563eb]', 'text-white');
-        esBtn.classList.remove('text-white/70');
-        enBtn.classList.remove('bg-[#2563eb]', 'text-white');
-        enBtn.classList.add('text-white/70');
+        esBtn.classList.add('bg-[#2563eb]', 'text-white'); esBtn.classList.remove('text-white/70');
+        enBtn.classList.remove('bg-[#2563eb]', 'text-white'); enBtn.classList.add('text-white/70');
         esEls.forEach(el => el.classList.remove('hidden'));
         enEls.forEach(el => el.classList.add('hidden'));
         document.documentElement.lang = 'es';
         localStorage.setItem('mandarcasa_lang', 'es');
       } else {
-        enBtn.classList.add('bg-[#2563eb]', 'text-white');
-        enBtn.classList.remove('text-white/70');
-        esBtn.classList.remove('bg-[#2563eb]', 'text-white');
-        esBtn.classList.add('text-white/70');
+        enBtn.classList.add('bg-[#2563eb]', 'text-white'); enBtn.classList.remove('text-white/70');
+        esBtn.classList.remove('bg-[#2563eb]', 'text-white'); esBtn.classList.add('text-white/70');
         esEls.forEach(el => el.classList.add('hidden'));
         enEls.forEach(el => el.classList.remove('hidden'));
         document.documentElement.lang = 'en';
@@ -174,7 +174,19 @@
 
     document.addEventListener('DOMContentLoaded', () => {
       const saved = localStorage.getItem('mandarcasa_lang') || 'es';
-      switchLanguage(saved);
+      const esBtn = document.getElementById('lang-es-btn');
+      const enBtn = document.getElementById('lang-en-btn');
+      const esEls = document.querySelectorAll('.lang-es');
+      const enEls = document.querySelectorAll('.lang-en');
+
+      if (saved === 'en') {
+        enBtn.classList.add('bg-[#2563eb]', 'text-white');
+        esEls.forEach(el => el.classList.add('hidden'));
+        enEls.forEach(el => el.classList.remove('hidden'));
+        document.documentElement.lang = 'en';
+      } else {
+        esBtn.classList.add('bg-[#2563eb]', 'text-white');
+      }
 
       // Pre-select USDT
       const usdt = document.querySelector('#payments .payment-card');
