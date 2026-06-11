@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MandarCasa — Send food, medicine, gifts and more from any U.S. city to your family in El Salvador. Same-day delivery." />
+  <title>MandarCasa — Send to Your Family in El Salvador</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { 'sans': ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            'brand': '#2563eb',
+            'brand-light': '#3b82f6',
+            'dark': '#07101f',
+            'surface': '#0d1a2e'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#07101f] text-white font-sans">
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 bg-[#07101f]/95 backdrop-blur-xl border-b border-[#1e3050]">
+    <div class="max-w-screen-xl mx-auto px-6 flex items-center justify-between h-16">
+      <a href="index-en.html" class="flex items-center gap-1 text-2xl font-black tracking-tighter">
+        Mandar<span class="text-[#3b82f6]">Casa</span>
+      </a>
+      
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="como-funciona-en.html" class="hover:text-[#3b82f6] transition-colors">How It Works</a>
+        <a href="proveedores-en.html" class="hover:text-[#3b82f6] transition-colors">For Vendors</a>
+        <a href="contacto-en.html" class="hover:text-[#3b82f6] transition-colors">Contact</a>
+      </div>
+      
+      <div class="flex items-center gap-3">
+        <!-- Language Toggle -->
+        <div class="flex items-center bg-[#0d1a2e] border border-[#1e3050] rounded-full p-1 text-xs">
+          <a href="index.html" class="px-3 py-1 rounded-full text-white/70 hover:text-white">ES</a>
+          <button class="px-3 py-1 rounded-full bg-[#2563eb] text-white font-medium">EN</button>
+        </div>
+        
+        <a href="pedido-en.html" 
+           class="px-6 py-2.5 rounded-xl bg-[#2563eb] hover:bg-[#3b82f6] font-semibold text-sm transition-all">
+          Place Order →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="max-w-screen-xl mx-auto px-6 pt-16 pb-16 text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-3xl bg-[#0d1a2e] border border-[#1e3050] text-[#3b82f6] text-sm font-semibold mb-6">
+      🇸🇻 San Salvador • San Miguel • Santa Ana • All of El Salvador
+    </div>
+    
+    <h1 class="text-6xl md:text-7xl font-black tracking-tighter leading-none mb-6">
+      Send food,<br>medicine and<br>
+      <span class="bg-gradient-to-r from-[#3b82f6] to-white bg-clip-text text-transparent">more to your family</span>
+    </h1>
+    
+    <p class="max-w-lg mx-auto text-xl text-white/70 mb-10">
+      From any city in the U.S. (Houston, Los Angeles, D.C., New York, Dallas…). 
+      Your family receives it the same day.
+    </p>
+    
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="pedido-en.html" 
+         class="inline-block px-9 py-4 rounded-2xl bg-[#2563eb] text-lg font-semibold hover:bg-[#3b82f6]">
+        Place Order Now
+      </a>
+      <a href="como-funciona-en.html" 
+         class="inline-flex items-center px-9 py-4 rounded-2xl border border-[#334b6e] hover:bg-white/5 text-lg font-medium">
+        See How It Works
+      </a>
+    </div>
+    
+    <div class="flex flex-wrap justify-center gap-x-7 gap-y-2 mt-8 text-sm text-white/50">
+      <div>USDT • Zelle • Cash App • Venmo</div>
+      <div class="hidden sm:block">•</div>
+      <div>No sign-up required</div>
+      <div>Same-day delivery</div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="border-y border-[#1e3050] bg-[#0d1a2e]">
+    <div class="max-w-screen-xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="font-black text-4xl text-[#3b82f6]">$8B+</div>
+        <div class="text-sm text-white/70 mt-1">sent to El Salvador every year</div>
+      </div>
+      <div>
+        <div class="font-black text-4xl text-[#3b82f6]">3M+</div>
+        <div class="text-sm text-white/70 mt-1">Salvadorans in the United States</div>
+      </div>
+      <div>
+        <div class="font-black text-4xl text-[#3b82f6]">24h</div>
+        <div class="text-sm text-white/70 mt-1">average delivery time</div>
+      </div>
+      <div>
+        <div class="font-black text-4xl text-[#3b82f6]">0</div>
+        <div class="text-sm text-white/70 mt-1">cost for the recipient</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="max-w-screen-xl mx-auto px-6 py-20">
+    <div class="text-center mb-12">
+      <div class="text-[#3b82f6] text-sm font-semibold tracking-[2px] mb-3">WHAT YOU CAN SEND</div>
+      <h2 class="text-4xl font-black tracking-tight">Everything your family needs</h2>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-[#0d1a2e] border border-[#1e3050] p-8 rounded-3xl">
+        <div class="text-5xl mb-4">🛒</div>
+        <div class="font-bold text-2xl mb-2">Groceries & Food</div>
+        <p class="text-white/70">Rice, beans, oil, sugar, meat, dairy — everything they need.</p>
+      </div>
+      <div class="bg-[#0d1a2e] border border-[#1e3050] p-8 rounded-3xl">
+        <div class="text-5xl mb-4">💊</div>
+        <div class="font-bold text-2xl mb-2">Medicine & Pharmacy</div>
+        <p class="text-white/70">Prescription and over-the-counter medicine delivered straight to their door.</p>
+      </div>
+      <div class="bg-[#0d1a2e] border border-[#1e3050] p-8 rounded-3xl">
+        <div class="text-5xl mb-4">🎂</div>
+        <div class="font-bold text-2xl mb-2">Gifts & Cake</div>
+        <p class="text-white/70">Birthday cakes, flowers, toys, jewelry — surprise them.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAYMENT -->
+  <section class="bg-[#0d1a2e] border-y border-[#1e3050] py-16">
+    <div class="max-w-screen-xl mx-auto px-6">
+      <div class="max-w-2xl mx-auto text-center mb-10">
+        <div class="inline-block px-4 py-1 bg-[#22c55e]/10 text-[#22c55e] text-xs font-bold tracking-widest rounded-full mb-4">PAY IN USD</div>
+        <h2 class="text-4xl font-black tracking-tight mb-3">Pay however is easiest for you</h2>
+        <p class="text-lg text-white/70">Crypto first. We also accept Zelle, Cash App, Venmo and PayPal.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-5 gap-4 max-w-5xl mx-auto">
+        <div class="col-span-1 md:col-span-2 bg-[#07101f] border border-[#22c55e] rounded-3xl p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="text-4xl">₿</div>
+            <div>
+              <div class="font-bold text-xl">USDT (Solana)</div>
+              <div class="text-[#22c55e] text-sm font-medium">RECOMMENDED • FASTEST & CHEAPEST</div>
+            </div>
+          </div>
+          <p class="text-sm text-white/70">Pay with USDT on Solana. Arrives in minutes. Best for vendors in El Salvador.</p>
+        </div>
+        
+        <div class="bg-[#07101f] border border-[#1e3050] rounded-3xl p-6">
+          <div class="text-3xl mb-3">🏦</div>
+          <div class="font-semibold">Zelle</div>
+        </div>
+        <div class="bg-[#07101f] border border-[#1e3050] rounded-3xl p-6">
+          <div class="text-3xl mb-3">📱</div>
+          <div class="font-semibold">Cash App</div>
+        </div>
+        <div class="bg-[#07101f] border border-[#1e3050] rounded-3xl p-6">
+          <div class="text-3xl mb-3">💸</div>
+          <div class="font-semibold">Venmo</div>
+        </div>
+      </div>
+      
+      <div class="mt-8 text-center">
+        <a href="pedido-en.html" class="inline-flex items-center gap-3 bg-white text-[#07101f] px-8 py-4 rounded-2xl font-bold text-lg">
+          Start Order via WhatsApp →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="max-w-screen-xl mx-auto px-6 py-20">
+    <div class="text-center mb-12">
+      <div class="text-[#3b82f6] text-sm font-semibold tracking-[2px]">REAL FAMILIES LIKE YOURS</div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-[#0d1a2e] border border-[#1e3050] p-8 rounded-3xl">
+        <p class="text-lg">"I sent a full grocery package to my mom in San Miguel for the first time. It arrived the same day and she sent me a photo. Now I do it every week."</p>
+        <div class="mt-6 text-sm text-white/60">— María G., Houston, TX</div>
+      </div>
+      <div class="bg-[#0d1a2e] border border-[#1e3050] p-8 rounded-3xl">
+        <p class="text-lg">"I paid with crypto because it was cheaper. My aunt in Santa Ana received the medicine the next day. Better than Western Union."</p>
+        <div class="mt-6 text-sm text-white/60">— Carlos R., Los Angeles, CA</div>
+      </div>
+      <div class="bg-[#0d1a2e] border border-[#1e3050] p-8 rounded-3xl">
+        <p class="text-lg">"My grandma in San Salvador turns 80 this month. I sent her cake and flowers through MandarCasa. Her reaction was worth every dollar."</p>
+        <div class="mt-6 text-sm text-white/60">— Ana P., Washington D.C.</div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

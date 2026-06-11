@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place Order — MandarCasa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>tailwind.config = {theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+</head>
+<body class="bg-[#07101f] text-white font-sans">
+
+  <nav class="sticky top-0 z-50 bg-[#07101f]/95 backdrop-blur-xl border-b border-[#1e3050]">
+    <div class="max-w-screen-xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index-en.html" class="font-black text-2xl tracking-tighter">Mandar<span class="text-[#3b82f6]">Casa</span></a>
+      <a href="index-en.html" class="text-sm text-white/70">← Back</a>
+    </div>
+  </nav>
+
+  <div class="max-w-3xl mx-auto px-6 pt-10 pb-20">
+    <div class="text-center mb-8">
+      <div class="text-[#3b82f6] text-xs font-extrabold tracking-[3px]">STEP 1 OF 2</div>
+      <h1 class="text-5xl font-black tracking-tighter mt-2">Create your order</h1>
+    </div>
+
+    <div class="mb-8">
+      <div class="text-sm text-white/70 mb-3 px-1">What do you want to send?</div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4" id="categories">
+        <div onclick="selectCategory(this, 'Groceries & Food')" class="category-card border border-[#1e3050] hover:border-[#3b82f6] rounded-3xl p-6 cursor-pointer bg-[#0d1a2e]">
+          <div class="text-4xl mb-3">🛒</div>
+          <div class="font-bold text-xl">Groceries & Food</div>
+        </div>
+        <div onclick="selectCategory(this, 'Medicine & Pharmacy')" class="category-card border border-[#1e3050] hover:border-[#3b82f6] rounded-3xl p-6 cursor-pointer bg-[#0d1a2e]">
+          <div class="text-4xl mb-3">💊</div>
+          <div class="font-bold text-xl">Medicine & Pharmacy</div>
+        </div>
+        <div onclick="selectCategory(this, 'Cake & Gifts')" class="category-card border border-[#1e3050] hover:border-[#3b82f6] rounded-3xl p-6 cursor-pointer bg-[#0d1a2e]">
+          <div class="text-4xl mb-3">🎂</div>
+          <div class="font-bold text-xl">Cake & Gifts</div>
+        </div>
+        <div onclick="selectCategory(this, 'Flowers')" class="category-card border border-[#1e3050] hover:border-[#3b82f6] rounded-3xl p-6 cursor-pointer bg-[#0d1a2e]">
+          <div class="text-4xl mb-3">💐</div>
+          <div class="font-bold text-xl">Flowers</div>
+        </div>
+        <div onclick="selectCategory(this, 'Restaurant Food')" class="category-card border border-[#1e3050] hover:border-[#3b82f6] rounded-3xl p-6 cursor-pointer bg-[#0d1a2e]">
+          <div class="text-4xl mb-3">🍽️</div>
+          <div class="font-bold text-xl">Restaurant Food</div>
+        </div>
+        <div onclick="selectCategory(this, 'Other')" class="category-card border border-[#1e3050] hover:border-[#3b82f6] rounded-3xl p-6 cursor-pointer bg-[#0d1a2e]">
+          <div class="text-4xl mb-3">📦</div>
+          <div class="font-bold text-xl">Other</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#0d1a2e] border border-[#1e3050] rounded-3xl p-8 mb-8">
+      <div class="space-y-5">
+        <div>
+          <label class="text-sm text-white/70 block mb-1.5">Describe exactly what you want to send</label>
+          <textarea id="descripcion" rows="3" class="w-full bg-[#07101f] border border-[#334b6e] rounded-2xl px-5 py-3.5" placeholder="Ex: 5 lb rice, 2 lb beans, 1 liter oil, 1 kg sugar"></textarea>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div><label class="text-sm text-white/70 block mb-1.5">Delivery city in El Salvador</label>
+          <input id="ciudad" type="text" class="w-full bg-[#07101f] border border-[#334b6e] rounded-2xl px-5 py-3.5" placeholder="San Miguel, Santa Ana..."></div>
+          <div><label class="text-sm text-white/70 block mb-1.5">Recipient name</label>
+          <input id="destinatario" type="text" class="w-full bg-[#07101f] border border-[#334b6e] rounded-2xl px-5 py-3.5" placeholder="María López"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <div class="text-sm text-white/70 mb-3 px-1">Payment method</div>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-3" id="payments">
+        <div onclick="selectPayment(this, 'USDT (Solana)')" class="payment-card border-2 border-[#22c55e] bg-[#0d1a2e] rounded-2xl p-4 cursor-pointer text-center">
+          <div class="font-bold">USDT (Solana)</div>
+          <div class="text-[#22c55e] text-xs mt-1">Recommended • Cheapest</div>
+        </div>
+        <div onclick="selectPayment(this, 'Zelle')" class="payment-card border border-[#1e3050] bg-[#0d1a2e] rounded-2xl p-4 cursor-pointer text-center"><div class="font-bold">Zelle</div></div>
+        <div onclick="selectPayment(this, 'Cash App')" class="payment-card border border-[#1e3050] bg-[#0d1a2e] rounded-2xl p-4 cursor-pointer text-center"><div class="font-bold">Cash App</div></div>
+        <div onclick="selectPayment(this, 'Venmo')" class="payment-card border border-[#1e3050] bg-[#0d1a2e] rounded-2xl p-4 cursor-pointer text-center"><div class="font-bold">Venmo</div></div>
+        <div onclick="selectPayment(this, 'PayPal')" class="payment-card border border-[#1e3050] bg-[#0d1a2e] rounded-2xl p-4 cursor-pointer text-center"><div class="font-bold">PayPal</div></div>
+      </div>
+    </div>
+
+    <button onclick="submitOrder()" class="w-full py-5 text-xl font-bold rounded-3xl bg-[#2563eb] hover:bg-[#3b82f6]">Continue and send via WhatsApp →</button>
+  </div>
+
+  <script>
+    let selectedCategory = ''; let selectedPayment = '';
+    function selectCategory(el, cat){ document.querySelectorAll('#categories .category-card').forEach(e=>e.classList.remove('border-[#3b82f6]','bg-[#0a1628]')); el.classList.add('border-[#3b82f6]','bg-[#0a1628]'); selectedCategory=cat; }
+    function selectPayment(el, m){ document.querySelectorAll('#payments .payment-card').forEach(e=>e.classList.remove('border-[#22c55e]','border-[#3b82f6]')); el.classList.add(m==='USDT (Solana)'?'border-[#22c55e]':'border-[#3b82f6]'); selectedPayment=m; }
+    function submitOrder(){
+      const d=document.getElementById('descripcion').value.trim(); const c=document.getElementById('ciudad').value.trim(); const r=document.getElementById('destinatario').value.trim();
+      if(!selectedCategory||!d||!c||!r||!selectedPayment){alert('Please select category, payment method and fill all fields.');return;}
+      const msg=`Hello MandarCasa, I want to place an order.%0A%0ACategory: ${selectedCategory}%0ADescription: ${d}%0ACity: ${c}%0ARecipient: ${r}%0APayment: ${selectedPayment}`;
+      window.location.href=`https://wa.me/18323624499?text=${msg}`;
+    }
+    document.addEventListener('DOMContentLoaded',()=>{const usdt=document.querySelector('#payments .payment-card');if(usdt){usdt.classList.add('border-[#22c55e]');selectedPayment='USDT (Solana)';}});
+  </script>
+</body>
+</html>
