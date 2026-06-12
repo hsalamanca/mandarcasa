@@ -29,10 +29,33 @@
     </div>
   </nav>
 
-  <div class="max-w-screen-xl mx-auto px-6 pt-16 pb-20 text-center">
-    <h1 class="text-5xl font-black tracking-tighter mb-6 lang-es">Estamos aquí para ti</h1>
-    <h1 class="text-5xl font-black tracking-tighter mb-6 lang-en hidden">We're here for you</h1>
-    <a href="https://wa.me/18323624499" class="inline-block bg-[#2563eb] px-8 py-4 rounded-2xl font-bold">💬 WhatsApp</a>
+  <div class="max-w-screen-xl mx-auto px-6 pt-16 pb-20">
+    <div class="text-center max-w-md mx-auto mb-12">
+      <div class="font-extrabold tracking-[3px] text-xs text-[#3b82f6] lang-es">HABLEMOS</div>
+      <div class="font-extrabold tracking-[3px] text-xs text-[#3b82f6] lang-en hidden">LET'S TALK</div>
+      <h1 class="font-black tracking-tighter text-6xl pt-2 lang-es">Estamos aquí para ti</h1>
+      <h1 class="font-black tracking-tighter text-6xl pt-2 lang-en hidden">We're here for you</h1>
+    </div>
+
+    <div class="max-w-3xl mx-auto grid md:grid-cols-3 gap-5">
+      <a href="https://wa.me/18323624499" class="block bg-[#0d1a2e] border border-[#1e3050] rounded-3xl p-8 text-center hover:border-[#3b82f6]">
+        <div class="mx-auto w-14 h-14 flex items-center justify-center rounded-2xl bg-emerald-500/10 text-4xl mb-5">📱</div>
+        <div class="font-semibold text-xl">WhatsApp</div>
+        <div class="text-[#22c55e] mt-1 text-lg font-medium">+1 (832) 362-4499</div>
+      </a>
+      
+      <div class="bg-[#0d1a2e] border border-[#1e3050] rounded-3xl p-8 text-center">
+        <div class="mx-auto w-14 h-14 flex items-center justify-center rounded-2xl bg-[#2563eb]/10 text-4xl mb-5">✉️</div>
+        <div class="font-semibold text-xl">Email</div>
+        <a href="mailto:hola@mandarcasa.com" class="text-[#3b82f6] mt-1 block text-lg">hola@mandarcasa.com</a>
+      </div>
+      
+      <div class="bg-[#0d1a2e] border border-[#1e3050] rounded-3xl p-8 text-center">
+        <div class="mx-auto w-14 h-14 flex items-center justify-center rounded-2xl bg-amber-500/10 text-4xl mb-5">🕒</div>
+        <div class="font-semibold text-xl">Disponibilidad</div>
+        <div class="text-white/75 mt-1">Lunes a Sábado<br>7:00 am — 8:00 pm CST</div>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -40,24 +63,27 @@
       const esBtn = document.getElementById('lang-es-btn'); const enBtn = document.getElementById('lang-en-btn');
       const esEls = document.querySelectorAll('.lang-es'); const enEls = document.querySelectorAll('.lang-en');
       if (lang === 'es') {
-        esBtn.classList.add('bg-[#2563eb]','text-white'); esBtn.classList.remove('text-white/70'); enBtn.classList.remove('bg-[#2563eb]','text-white'); enBtn.classList.add('text-white/70');
+        esBtn.classList.add('bg-[#2563eb]','text-white'); esBtn.classList.remove('text-white/70');
+        enBtn.classList.remove('bg-[#2563eb]','text-white'); enBtn.classList.add('text-white/70');
         esEls.forEach(el => el.classList.remove('hidden')); enEls.forEach(el => el.classList.add('hidden'));
         document.documentElement.lang = 'es'; localStorage.setItem('mandarcasa_lang','es');
       } else {
-        enBtn.classList.add('bg-[#2563eb]','text-white'); enBtn.classList.remove('text-white/70'); esBtn.classList.remove('bg-[#2563eb]','text-white'); esBtn.classList.add('text-white/70');
+        enBtn.classList.add('bg-[#2563eb]','text-white'); enBtn.classList.remove('text-white/70');
+        esBtn.classList.remove('bg-[#2563eb]','text-white'); esBtn.classList.add('text-white/70');
         esEls.forEach(el => el.classList.add('hidden')); enEls.forEach(el => el.classList.remove('hidden'));
         document.documentElement.lang = 'en'; localStorage.setItem('mandarcasa_lang','en');
       }
     }
     document.addEventListener('DOMContentLoaded', () => {
       const saved = localStorage.getItem('mandarcasa_lang') || 'es';
+      const esBtn = document.getElementById('lang-es-btn'); const enBtn = document.getElementById('lang-en-btn');
       if (saved === 'en') {
-        document.getElementById('lang-en-btn').classList.add('bg-[#2563eb]','text-white');
+        enBtn.classList.add('bg-[#2563eb]','text-white');
         document.querySelectorAll('.lang-es').forEach(el => el.classList.add('hidden'));
         document.querySelectorAll('.lang-en').forEach(el => el.classList.remove('hidden'));
         document.documentElement.lang = 'en';
       } else {
-        document.getElementById('lang-es-btn').classList.add('bg-[#2563eb]','text-white');
+        esBtn.classList.add('bg-[#2563eb]','text-white');
       }
     });
   </script>

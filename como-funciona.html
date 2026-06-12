@@ -29,13 +29,41 @@
     </div>
   </nav>
 
-  <div class="max-w-screen-xl px-6 mx-auto pt-16 pb-20 text-center">
-    <h1 class="text-5xl font-black tracking-tighter mb-4 lang-es">Cómo funciona en 3 pasos</h1>
-    <h1 class="text-5xl font-black tracking-tighter mb-4 lang-en hidden">How it works in 3 steps</h1>
-    <div class="max-w-2xl mx-auto grid md:grid-cols-3 gap-6 mt-10">
-      <div class="bg-[#0d1a2e] border border-[#1e3050] p-8 rounded-3xl">01. Elige qué quieres enviar</div>
-      <div class="bg-[#0d1a2e] border border-[#1e3050] p-8 rounded-3xl">02. Paga con Crypto, Zelle, etc.</div>
-      <div class="bg-[#0d1a2e] border border-[#1e3050] p-8 rounded-3xl">03. Tu familia recibe + foto</div>
+  <div class="max-w-screen-xl px-6 mx-auto pt-16 pb-20">
+    <div class="text-center mb-16">
+      <div class="text-[#3b82f6] text-xs font-extrabold tracking-[3px] lang-es">PROCESO SIMPLE</div>
+      <div class="text-[#3b82f6] text-xs font-extrabold tracking-[3px] lang-en hidden">SIMPLE PROCESS</div>
+      <h1 class="text-6xl font-black tracking-tighter pt-3 lang-es">Cómo funciona en 3 pasos</h1>
+      <h1 class="text-6xl font-black tracking-tighter pt-3 lang-en hidden">How it works in 3 steps</h1>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="bg-[#0d1a2e] border border-[#1e3050] rounded-3xl p-9">
+        <div class="text-[#3b82f6] text-sm font-mono font-bold mb-4">01</div>
+        <div class="font-black text-4xl tracking-tighter mb-6 lang-es">Elige qué quieres enviar</div>
+        <div class="font-black text-4xl tracking-tighter mb-6 lang-en hidden">Choose what to send</div>
+        <p class="text-lg text-white/80 lang-es">Despensa, medicinas, pasteles, flores, regalos de vendedores verificados en San Salvador, San Miguel, Santa Ana y más.</p>
+        <p class="text-lg text-white/80 lang-en hidden">Groceries, medicine, cakes, flowers, gifts from verified vendors in San Salvador, San Miguel, Santa Ana and more.</p>
+      </div>
+      <div class="bg-[#0d1a2e] border border-[#1e3050] rounded-3xl p-9">
+        <div class="text-[#3b82f6] text-sm font-mono font-bold mb-4">02</div>
+        <div class="font-black text-4xl tracking-tighter mb-6 lang-es">Paga con Crypto, Zelle o lo que prefieras</div>
+        <div class="font-black text-4xl tracking-tighter mb-6 lang-en hidden">Pay with Crypto, Zelle or any method</div>
+        <p class="text-lg text-white/80 lang-es">Elige: <strong>USDT (Solana)</strong>, Zelle, Cash App, Venmo o PayPal. Pagas en dólares.</p>
+        <p class="text-lg text-white/80 lang-en hidden">Choose: <strong>USDT (Solana)</strong>, Zelle, Cash App, Venmo or PayPal. Pay in USD.</p>
+      </div>
+      <div class="bg-[#0d1a2e] border border-[#1e3050] rounded-3xl p-9">
+        <div class="text-[#3b82f6] text-sm font-mono font-bold mb-4">03</div>
+        <div class="font-black text-4xl tracking-tighter mb-6 lang-es">Tu familia recibe y tú recibes prueba</div>
+        <div class="font-black text-4xl tracking-tighter mb-6 lang-en hidden">Your family receives + you get proof</div>
+        <p class="text-lg text-white/80 lang-es">El vendedor entrega en menos de 24h. Te enviamos foto + confirmación por WhatsApp.</p>
+        <p class="text-lg text-white/80 lang-en hidden">Vendor delivers within 24 hours. We send you photo + confirmation on WhatsApp.</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-16">
+      <a href="pedido.html" class="inline-block bg-[#2563eb] px-10 py-4 rounded-2xl font-bold text-xl lang-es">Empezar mi primer pedido →</a>
+      <a href="pedido.html" class="inline-block bg-[#2563eb] px-10 py-4 rounded-2xl font-bold text-xl lang-en hidden">Start My First Order →</a>
     </div>
   </div>
 
@@ -44,24 +72,27 @@
       const esBtn = document.getElementById('lang-es-btn'); const enBtn = document.getElementById('lang-en-btn');
       const esEls = document.querySelectorAll('.lang-es'); const enEls = document.querySelectorAll('.lang-en');
       if (lang === 'es') {
-        esBtn.classList.add('bg-[#2563eb]','text-white'); esBtn.classList.remove('text-white/70'); enBtn.classList.remove('bg-[#2563eb]','text-white'); enBtn.classList.add('text-white/70');
+        esBtn.classList.add('bg-[#2563eb]','text-white'); esBtn.classList.remove('text-white/70');
+        enBtn.classList.remove('bg-[#2563eb]','text-white'); enBtn.classList.add('text-white/70');
         esEls.forEach(el => el.classList.remove('hidden')); enEls.forEach(el => el.classList.add('hidden'));
         document.documentElement.lang = 'es'; localStorage.setItem('mandarcasa_lang','es');
       } else {
-        enBtn.classList.add('bg-[#2563eb]','text-white'); enBtn.classList.remove('text-white/70'); esBtn.classList.remove('bg-[#2563eb]','text-white'); esBtn.classList.add('text-white/70');
+        enBtn.classList.add('bg-[#2563eb]','text-white'); enBtn.classList.remove('text-white/70');
+        esBtn.classList.remove('bg-[#2563eb]','text-white'); esBtn.classList.add('text-white/70');
         esEls.forEach(el => el.classList.add('hidden')); enEls.forEach(el => el.classList.remove('hidden'));
         document.documentElement.lang = 'en'; localStorage.setItem('mandarcasa_lang','en');
       }
     }
     document.addEventListener('DOMContentLoaded', () => {
       const saved = localStorage.getItem('mandarcasa_lang') || 'es';
+      const esBtn = document.getElementById('lang-es-btn'); const enBtn = document.getElementById('lang-en-btn');
       if (saved === 'en') {
-        document.getElementById('lang-en-btn').classList.add('bg-[#2563eb]','text-white');
+        enBtn.classList.add('bg-[#2563eb]','text-white');
         document.querySelectorAll('.lang-es').forEach(el => el.classList.add('hidden'));
         document.querySelectorAll('.lang-en').forEach(el => el.classList.remove('hidden'));
         document.documentElement.lang = 'en';
       } else {
-        document.getElementById('lang-es-btn').classList.add('bg-[#2563eb]','text-white');
+        esBtn.classList.add('bg-[#2563eb]','text-white');
       }
     });
   </script>
